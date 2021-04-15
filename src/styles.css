@@ -13,3 +13,123 @@ body {
   Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
   'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
+
+
+ul {
+  list-style: none;
+}
+.header{
+
+  padding-top: 30px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+}
+
+
+/* --------------------HEADER--------------------- */
+
+.input_form_city{
+ display: flex;
+}
+.input_nav{
+  display: relative;
+margin: 0 auto;
+width: 280px;
+height: 48px;
+border-radius: 20px;
+border: none;
+padding: 13px; 
+
+}
+.btn_input{
+  position: absolute;
+  right: 10%;
+  top: 8%;
+  transform: translate(-50%, 0); 
+}
+
+.slider_btn{
+  visibility: hidden;
+}
+.fav_cities{
+  width: 0px;
+  height: 0px;
+}
+/* ------------------------------MAIN-------------------- */
+
+
+
+h1{
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+}
+
+
+/* --------------------------current_city--------------------- */
+.current_city{
+  margin: 0 auto;
+ padding: 30px 56px;
+  width: 280px;
+height: 190px;
+left: 20px;
+top: 166px;
+
+background: rgba(16, 33, 54, 0.8);
+box-shadow: 0px 5px 33px rgba(16, 33, 54, 0.6);
+border-radius: 34px;
+margin-bottom: 30px;
+}
+/* ------------------------------ */
+.button_block{
+  display: flex;
+ 
+  margin-bottom: 30px;
+}
+.btn_today{ 
+
+justify-content: center;
+align-items: center;
+padding: 0px 12px;
+
+position: absolute;
+width: 126px;
+height: 27px;
+left: 25px;
+top: 387px;
+
+background: #FFFFFF;
+border-radius: 20px;
+  margin: 0 auto;
+  border: none;
+}
+.btn_five_days{
+
+  justify-content: center;
+  align-items: center;
+  padding: 0px 12px;
+  
+  position: absolute;
+  width: 126px;
+  height: 28px;
+  left: 169px;
+  top: 386px;
+  
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  border: none;
+  }
+/* --------------------------- */
+
+
+.block_temperature{
+  margin: 0 auto;
+  width: 280px;
+height: 190px;
+left: 20px;
+top: 444px;
+padding-top: 30px;
+padding-bottom: 40px;
+background: rgba(16, 33, 54, 0.8);
+border-radius: 34px;
+}
