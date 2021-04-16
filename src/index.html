@@ -5,101 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Webpack Starter Kit</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap">
+    <link rel="stylesheet" href="/src/styles.css"/>
   </head>
+<body>
   <header class="header">
 
-    <form class="input_form_city">
-      <input type="text" class="input_nav" placeholder="Enter the city" >
-      <button class="btn_input">Go</button>
-    </form>
+      <div class="container">
+          <div class="input_container">
+            <form class="input_form_city">
+              <svg class="location_icon">
+                <use href="./images/symbol-defs.svg#icon-location-icon-uc"></use>
+              </svg>
+              <input class="input-location" type="submit">
+              <input class="input_nav" type="search" placeholder="Enter the city">
+              <input class="input_btn" type="submit">
+              <svg class="favourites_icon">
+                <use href="./images/symbol-defs.svg#icon-favorites-uc"></use>
+              </svg>
+            </form>
+          </div>
     
-      
-      <div class="fav_cities">
-      <ul class="fav_country_list">
-
-      </ul>
-      <!-- in future hide the button  -->
-      <button class="slider_btn"> </button> 
-    </div>
+        <div class="fav_cities">
+          <ul class="fav_country_list">
+        
+          </ul>
+          <!-- in future hide the button  -->
+          <button class="slider_btn"> </button> 
+        
+        </div>
+      </div>
     
   </header>
 
-  <body>
 <main>
   <!-- in future hide this title  -->
-<h1 >weather forecast</h1>
-  
+  <div class="container">
+    <h1>weather forecast</h1>
+
+    <div class="current_city">
+      <h2 class="current_city_title"></h2>
+      
+      
+      <ul class="current_city_list">
     
-
-  <div class="current_city">
-    <h2 class="current_city_title"></h2>
-  
-  
-  <ul class="current_city_list">
-
-  </ul>
-</div>
-<ul class="button_block">
-  <li><button class="btn_today">TODAY</button></li>
-<li><button class="btn_five_days">5 DAYS</button></li>
-
-</ul>
-
-<div class="block_temperature">
-  <ul class="temperature_list">
-    <!-- write here the current date and etc via templates -->
-  </ul>
-</div>
-<div class="quotes"></div>
-
-<div class="five_days_block">
-  <h2 class="current_city_title"></h2>
-  <div>
-    <ul>
-<li class=""> 
-  <button class="more_info"></button>
-</li>
-<li class=""> 
-  <button class="more_info"></button>
-</li>
-<li class=""> 
-  <button class="more_info"></button>
-</li>
-<li class=""> 
-  <button class="more_info"></button>
-</li>
-<li class=""> 
-  <button class="more_info"></button>
-</li>
-    </ul>
-
-    <button class="btn_next_days"></button>
-    <button class="btn_previous_days"></button>
-    <div class="full_info_container">
-      <ul class="full_info_list">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
       </ul>
     </div>
-  </div>
-
-</div>
-<!-- when you tap btn show chart ->hide more info  -->
-<button class="btn_show_chart"></button>
-
-
-<div>
-  <button class="btn_hide_chart"></button>
-  <ul class="chart">
-    <!-- here must be chart  -->
     
-  </ul>
-</div>
+    <ul class="button_block">
+      <li><button class="btn_today">TODAY</button></li>
+      <li><button class="btn_five_days">5 DAYS</button></li>
+      </ul>
+    
+    <div class="block_date">
+      <ul class="date_list">
+        <!-- write here the current date and etc via templates -->
+      </ul>
+    </div>
+    <div class="quotes">
+      <p class="quote_text">Who cares about the clouds when we're together? Just sing a song and bring the sunny weather.</p>
+      <p class="quote_owner">Dale Evans</p>
+    </div>
+    
+    <div class="five_days_block">
+
+      <!-- !!!!!!!!!!!РЕШИТЬ ОСТАВИТЬ СТРУКТУРУ В ВЕРСТКЕ ИЛИ ПОЛНОСТЬЮ ОТРИСОВАТЬ В JS -->
+
+      <!-- <h2 class="current_city_title"></h2>
+      <div>
+        <ul class="five_days_list">
+    <li class=""> 
+      <button class="more_info"></button>
+    </li>
+    <li class=""> 
+      <button class="more_info"></button>
+    </li>
+    <li class=""> 
+      <button class="more_info"></button>
+    </li>
+    <li class=""> 
+      <button class="more_info"></button>
+    </li>
+    <li class=""> 
+      <button class="more_info"></button>
+    </li>
+        </ul>
+    
+        <button class="btn_next_days"></button>
+        <button class="btn_previous_days"></button>
+        <div class="full_info_container">
+          <ul class="full_info_list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+          </ul>
+        </div> -->
+      </div>
+    
+    </div>
+    <!-- when you tap btn show chart ->hide more info  -->
+    <button class="btn_show_chart">Show Chart</button>
+    
+    
+    <div>
+      <button class="btn_hide_chart">Hide Chart</button>
+
+      <!-- !!!!!!!!! HERE MUST BE CHART -->
+
+    </div>
+    
 </main>
 
-  </body>
+</body>
 
 </html>
