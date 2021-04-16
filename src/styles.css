@@ -1,20 +1,17 @@
 *,
 *::before,
 *::after {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
-
 html {
   box-sizing: border-box;
 }
-
 img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
-
 h1,
 h2,
 h3,
@@ -22,50 +19,39 @@ h4,
 h5,
 h6,
 p {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
-
-
 body {
-  background-color: aqua;
+  background-color: cadetblue;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
-  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
-
 ul {
   list-style: none;
 }
-
 a {
   text-decoration: none;
   color: inherit;
 }
-
 .container {
   margin: 0 20px;
 }
-
 /* -------------------HEADER------------------- */
-
-
-
 .input_form_city {
   margin-top: 30px;
   margin-bottom: 90px;
 }
-
 .input_nav {
   width: 100%;
   height: 48px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 30px;
   padding-left: 60px;
   padding-right: 26px;
   border: none;
 }
-
 .input-location {
   display: block;
   position: absolute;
@@ -78,7 +64,6 @@ a {
   background-color: transparent;
   z-index: 3;
 }
-
 .location_icon {
   display: block;
   position: absolute;
@@ -86,9 +71,8 @@ a {
   height: 22px;
   left: 40px;
   top: 43px;
-  fill: #7E8691;
+  fill: #7e8691;
 }
-
 .input_btn {
   display: block;
   position: absolute;
@@ -101,7 +85,6 @@ a {
   background-color: transparent;
   z-index: 3;
 }
-
 .favourites_icon {
   display: block;
   position: absolute;
@@ -109,27 +92,23 @@ a {
   height: 22px;
   right: 50px;
   top: 43px;
-  stroke: #7E8691;
+  stroke: #7e8691;
   fill: white;
 }
-
 .fav_cities {
   visibility: hidden;
   width: 0;
   height: 0;
-  }
+}
 
-  /* ----------------------------------MAIN-------------------- */
-
+/* ----------------------------------MAIN-------------------- */
 h1 {
   visibility: hidden;
   width: 0;
   height: 0;
-  }
-
+}
 /* оставил фиксированую ширину текущего города, но в будущем пересмотреть с падингами */
-
-.current_city{
+.current_city {
   margin: 0 auto;
   padding: 30px 56px;
   height: 190px;
@@ -137,29 +116,26 @@ h1 {
   box-shadow: 0px 5px 33px rgba(16, 33, 54, 0.6);
   border-radius: 34px;
   margin-bottom: 30px;
-  }
-
-.button_block{
+}
+.button_block {
   width: 270px;
   margin: 0 auto;
   display: flex;
   margin-bottom: 30px;
   justify-content: space-between;
-  }
-
-.btn_today{ 
+}
+.btn_today {
   justify-content: center;
   align-items: center;
   padding: 0px 12px;
   width: 126px;
   height: 27px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 20px;
   margin: 0 auto;
   border: none;
-  }
-
-.btn_five_days{     
+}
+.btn_five_days {
   justify-content: center;
   align-items: center;
   padding: 0px 12px;
@@ -168,8 +144,7 @@ h1 {
   background: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   border: none;
-  }
-
+}
 .block_date {
   margin: 0 auto;
   margin-bottom: 30px;
@@ -178,12 +153,11 @@ h1 {
   padding-bottom: 40px;
   background: rgba(16, 33, 54, 0.8);
   border-radius: 34px;
-  }
- 
+}
+
 .quotes {
   margin-bottom: 30px;
-  }
-
+}
 .quote_text {
   margin-bottom: 15px;
   font-family: Lato;
@@ -193,10 +167,9 @@ h1 {
   line-height: 17px;
   text-align: right;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
-  }
-
-.quote_owner {        
+  color: #ffffff;
+}
+.quote_owner {
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
@@ -205,23 +178,19 @@ h1 {
   align-items: center;
   text-align: right;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
-  }
-
+  color: #ffffff;
+}
 /* ----------------------------------------------------------------------- */
-
 .five_days_block {
   margin-bottom: 20px;
   height: 273px;
   background: rgba(16, 33, 54, 0.8);
   box-shadow: 0px 5px 33px rgba(16, 33, 54, 0.6);
   border-radius: 34px;
-  }
-
+}
 .five_days_list {
   display: flex;
 }
-
 .btn_show_chart {
   display: block;
   margin: 0 auto;
@@ -235,10 +204,9 @@ h1 {
   align-items: center;
   text-decoration-line: underline;
   border: none;
-  color: #FF6B09;
+  color: #ff6b09;
   background-color: transparent;
 }
-
 .btn_hide_chart {
   display: block;
   margin: 0 auto;
@@ -252,6 +220,59 @@ h1 {
   align-items: center;
   text-decoration-line: underline;
   border: none;
-  color: #FF6B09;
+  color: #ff6b09;
   background-color: transparent;
+}
+
+.extra_deys_block {
+  margin-bottom: 20px;
+  height: 540px;
+  background: rgba(16, 33, 54, 0.8);
+  box-shadow: 0px 5px 33px rgba(16, 33, 54, 0.6);
+  border-radius: 34px;
+}
+
+.icon_weather {
+  height: 35px;
+  width: 35px;
+}
+
+@media screen and (min-width: 468px) {
+  .container {
+    max-width: 450px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0 auto;
+  }
+  .input_form_city {
+    position: relative;
+  }
+  .input-location {
+    left: 20px;
+    top: 12px;
+  }
+  .location_icon {
+    left: 20px;
+    top: 12px;
+  }
+  .input_btn {
+    right: 24px;
+    top: 12px;
+  }
+  .favourites_icon {
+    display: block;
+    right: 24px;
+    top: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+}
+@media screen and (min-width: 1279px) {
+  .container {
+    min-width: 1200px;
+  }
 }
