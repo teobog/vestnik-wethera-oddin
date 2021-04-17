@@ -26,7 +26,20 @@
   
       <div class="fav_cities">
         <ul class="fav_country_list">
-  
+          <li class="fav_country_item">
+            <a class="fav_country_link">Kyiv</a>
+            <svg class="close_icon">
+              <use></use>
+            </svg>
+          </li>
+          <li class="fav_country_item">
+            <a class="fav_country_link">Paris</a>
+            <svg class="close_icon">
+              <use></use>
+            </svg>
+          </li>
+          <li></li>
+          <li></li>
         </ul>
         <!-- in future hide the button  -->
         <button class="slider_btn"> </button>
@@ -42,24 +55,63 @@
       <h1>weather forecast</h1>
   
       <div class="current_city">
-        <h2 class="current_city_title"></h2>
-  
-  
+        
         <ul class="current_city_list">
-  
+          <li class="current_city_item">
+            <svg class="weather_icon">
+              <use href="./images/symbol-defs.svg#icon-cloud-wc"></use>
+            </svg>
+          </li>
+          <li class="current_city_item">
+            <h2 class="current_city_title">Kyiv, UA</h2>
+          </li>
+          <li class="current_city_item">
+            <p class="current_temperature_text">-3</p>
+          </li>
+          <li class="current_city_item stick">
+            <span class="temperature_range">min</span>
+            <p class="temperature_degree">-2&deg</p>
+          </li>
+          <li class="current_city_item">
+            <span class="temperature_range">max</span>
+            <p class="temperature_degree">1&deg</p>
+          </li>
         </ul>
       </div>
   
   
   
       <ul class="button_block">
-        <li><a href="./index.html">TODAY</a></li>
-        <li><a href="./five_days.html">5 DAYS</a></li>
-      </ul>
+        <li><button class="btn_today">TODAY</button></li>
+        <li><button class="btn_five_days">5 DAYS</button></li>
+    </ul>
   
       <div class="block_date">
         <ul class="date_list">
-          <!-- write here the current date and etc via templates -->
+          <li>
+            <p>8th</p>
+          </li>
+          <li>
+            <p>Saturday</p>
+          </li>
+          <li>
+            <p>Februrary</p>
+          </li>
+          <li>
+            <p>21:30:56</p>
+          </li>
+          <li>
+            <svg class="sunrise_icon">
+              <use href="./images/symbol-defs.svg#icon-sunrise"></use>
+            </svg>
+            <p>07:04</p>
+          </li>
+          <li>
+            <svg class="sunset_icon">
+              <use href="./images/symbol-defs.svg#icon-sunset"></use>
+            </svg>
+            <p>17:05</p>
+          </li>
         </ul>
       </div>
       <div class="quotes">
@@ -68,9 +120,511 @@
         <p class="quote_owner">Dale Evans</p>
       </div>
   
-      <!-- ----------------------------------------Отрисовка следующего блока--------------------------------------------------------- -->
-  
-  
+      <!-- ----------------------------------------FIVE DAYS BLOCK--------------------------------------------------------- -->
+
+
+      <div class="five_days_block">
+
+        <h2 class="current_city_title">Kyiv, UA</h2>
+        <div>
+            <ul class="five_days_list">
+                <li class="day_one">
+                    <ul class="">
+                        <li class="day_of_week">
+                            <p>Sunday</p>
+                        </li>
+                        <li class="date">
+                          <p>09 Feb</p>
+                        </li>
+                        <li>
+                            <svg class="weather_icon">
+                                <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                                </use>
+                            </svg>
+                        </li>
+                        <li class="current_city_item stick">
+                          <span class="temperature_range">min</span>
+                          <p class="temperature_degree">-2&deg</p>
+                        </li>
+                        <li class="current_city_item">
+                          <span class="temperature_range">max</span>
+                          <p class="temperature_degree">1&deg</p>
+                        </li>
+                        <li>
+                          <button type="button">more info</button>
+                        </li>
+                    </ul>
+                </li>
+                <li class="">
+                  <ul class="five_days_list">
+                    <li class="day_one">
+                        <ul class="">
+                            <li class="day_of_week">
+                                <p>Sunday</p>
+                            </li>
+                            <li class="date">
+                              <p>09 Feb</p>
+                            </li>
+                            <li>
+                                <svg class="weather_icon">
+                                    <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                                    </use>
+                                </svg>
+                            </li>
+                            <li class="current_city_item stick">
+                              <span class="temperature_range">min</span>
+                              <p class="temperature_degree">-2&deg</p>
+                            </li>
+                            <li class="current_city_item">
+                              <span class="temperature_range">max</span>
+                              <p class="temperature_degree">1&deg</p>
+                            </li>
+                            <li>
+                              <button type="button">more info</button>
+                            </li>
+                        </ul>
+                </li>
+                <li class="">
+                  <ul class="five_days_list">
+                    <li class="day_one">
+                        <ul class="">
+                            <li class="day_of_week">
+                                <p>Sunday</p>
+                            </li>
+                            <li class="date">
+                              <p>09 Feb</p>
+                            </li>
+                            <li>
+                                <svg class="weather_icon">
+                                    <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                                    </use>
+                                </svg>
+                            </li>
+                            <li class="current_city_item stick">
+                              <span class="temperature_range">min</span>
+                              <p class="temperature_degree">-2&deg</p>
+                            </li>
+                            <li class="current_city_item">
+                              <span class="temperature_range">max</span>
+                              <p class="temperature_degree">1&deg</p>
+                            </li>
+                            <li>
+                              <button type="button">more info</button>
+                            </li>
+                        </ul>
+                </li>
+                <li class="">
+
+                </li>
+                <li class="">
+
+                </li>
+            </ul>
+
+            <button class="btn_previous_days"></button>
+            <button class="btn_next_days"></button>
+
+            </div>
+            </div>
+
+            <button class="btn_show_chart">Show Chart</button>
+
+<!-- --------------------------------Full INFO Block----------------------------------- -->
+
+<div class="five_days_block">
+
+  <h2 class="current_city_title">Kyiv, UA</h2>
+  <div>
+      <ul class="five_days_list">
+          <li class="day_one">
+              <ul class="">
+                  <li class="day_of_week">
+                      <p>Sunday</p>
+                  </li>
+                  <li class="date">
+                    <p>09 Feb</p>
+                  </li>
+                  <li>
+                      <svg class="weather_icon">
+                          <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                          </use>
+                      </svg>
+                  </li>
+                  <li class="current_city_item stick">
+                    <span class="temperature_range">min</span>
+                    <p class="temperature_degree">-2&deg</p>
+                  </li>
+                  <li class="current_city_item">
+                    <span class="temperature_range">max</span>
+                    <p class="temperature_degree">1&deg</p>
+                  </li>
+                  <li>
+                    <button type="button">more info</button>
+                  </li>
+              </ul>
+          </li>
+          <li class="">
+            <ul class="five_days_list">
+              <li class="day_one">
+                  <ul class="">
+                      <li class="day_of_week">
+                          <p>Sunday</p>
+                      </li>
+                      <li class="date">
+                        <p>09 Feb</p>
+                      </li>
+                      <li>
+                          <svg class="weather_icon">
+                              <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                              </use>
+                          </svg>
+                      </li>
+                      <li class="current_city_item stick">
+                        <span class="temperature_range">min</span>
+                        <p class="temperature_degree">-2&deg</p>
+                      </li>
+                      <li class="current_city_item">
+                        <span class="temperature_range">max</span>
+                        <p class="temperature_degree">1&deg</p>
+                      </li>
+                      <li>
+                        <button type="button">more info</button>
+                      </li>
+                  </ul>
+          </li>
+          <li class="">
+            <ul class="five_days_list">
+              <li class="day_one">
+                  <ul class="">
+                      <li class="day_of_week">
+                          <p>Sunday</p>
+                      </li>
+                      <li class="date">
+                        <p>09 Feb</p>
+                      </li>
+                      <li>
+                          <svg class="weather_icon">
+                              <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                              </use>
+                          </svg>
+                      </li>
+                      <li class="current_city_item stick">
+                        <span class="temperature_range">min</span>
+                        <p class="temperature_degree">-2&deg</p>
+                      </li>
+                      <li class="current_city_item">
+                        <span class="temperature_range">max</span>
+                        <p class="temperature_degree">1&deg</p>
+                      </li>
+                      <li>
+                        <button type="button">more info</button>
+                      </li>
+                  </ul>
+          </li>
+          <li class="">
+
+          </li>
+          <li class="">
+
+          </li>
+      </ul>
+
+      <button class="btn_previous_days"></button>
+      <button class="btn_next_days"></button>
+
+      <div class="full_info_container">
+        <ul class="full_info_list">
+            <li class="card">
+                <ul>
+                  <li>
+                      <p>00:00</p>
+                  </li>
+                  <li>
+                    <svg class="weather_icon">
+                      <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                      </use>
+                  </svg>
+                  </li>
+                  <li>
+                    <p>-2&deg;</p>
+                  </li>
+                  <li>
+                    <svg class="full_info_icon">
+                      <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                    </svg>
+                    <p>772 mm</p>
+                  </li>
+                  <li>
+                    <svg class="full_info_icon">
+                      <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                    </svg>
+                    <p>54%</p>
+                  </li>
+                  <li>
+                    <svg class="full_info_icon">
+                      <use href="./images/symbol-defs.svg#icon-wind"></use>
+                    </svg>
+                    <p>3.7 m/s</p>
+                  </li>
+                </ul>
+            </li>
+            <li class="card">
+              <ul>
+                <li>
+                    <p>00:00</p>
+                </li>
+                <li>
+                  <svg class="weather_icon">
+                    <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                    </use>
+                </svg>
+                </li>
+                <li>
+                  <p>-5&deg;</p>
+                </li>
+                <li>
+                  <svg class="full_info_icon">
+                    <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                  </svg>
+                  <p>772 mm</p>
+                </li>
+                <li>
+                  <svg class="full_info_icon">
+                    <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                  </svg>
+                  <p>54%</p>
+                </li>
+                <li>
+                  <svg class="full_info_icon">
+                    <use href="./images/symbol-defs.svg#icon-wind"></use>
+                  </svg>
+                  <p>3.7 m/s</p>
+                </li>
+              </ul>
+            </li>
+            <li class="card">
+              <ul>
+                <li>
+                    <p>00:00</p>
+                </li>
+                <li>
+                  <svg class="weather_icon">
+                    <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                    </use>
+                </svg>
+                </li>
+                <li>
+                  <p>-2&deg;</p>
+                </li>
+                <li>
+                  <svg class="full_info_icon">
+                    <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                  </svg>
+                  <p>772 mm</p>
+                </li>
+                <li>
+                  <svg class="full_info_icon">
+                    <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                  </svg>
+                  <p>54%</p>
+                </li>
+                <li>
+                  <svg class="full_info_icon">
+                    <use href="./images/symbol-defs.svg#icon-wind"></use>
+                  </svg>
+                  <p>3.7 m/s</p>
+                </li>
+              </ul>
+            </li>
+            <li class="card">
+              <ul>
+                <li>
+                    <p>00:00</p>
+                </li>
+                <li>
+                  <svg class="weather_icon">
+                    <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                    </use>
+                </svg>
+                </li>
+                <li>
+                  <p>-2&deg;</p>
+                </li>
+                <li>
+                  <svg class="full_info_icon">
+                    <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                  </svg>
+                  <p>772 mm</p>
+                </li>
+                <li>
+                  <svg class="full_info_icon">
+                    <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                  </svg>
+                  <p>54%</p>
+                </li>
+                <li>
+                  <svg class="full_info_icon">
+                    <use href="./images/symbol-defs.svg#icon-wind"></use>
+                  </svg>
+                  <p>3.7 m/s</p>
+                </li>
+              </ul>
+            </li>
+            <li class="card">
+              <ul>
+                <li>
+                    <p>00:00</p>
+                </li>
+                <li>
+                  <svg class="weather_icon">
+                    <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                    </use>
+                </svg>
+                </li>
+                <li>
+                  <p>-2&deg;</p>
+                </li>
+                <li>
+                  <svg class="full_info_icon">
+                    <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                  </svg>
+                  <p>772 mm</p>
+                </li>
+                <li>
+                  <svg class="full_info_icon">
+                    <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                  </svg>
+                  <p>54%</p>
+                </li>
+                <li>
+                  <svg class="full_info_icon">
+                    <use href="./images/symbol-defs.svg#icon-wind"></use>
+                  </svg>
+                  <p>3.7 m/s</p>
+                </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+
+      </div>
+      </div>
+
+      <button class="btn_show_chart">Show Chart</button>
+
+      <!-- --------------------------------------------CHART BLOCK--------------------------- -->
+
+      <div class="five_days_block">
+
+        <h2 class="current_city_title">Kyiv, UA</h2>
+        <div>
+            <ul class="five_days_list">
+                <li class="day_one">
+                    <ul class="">
+                        <li class="day_of_week">
+                            <p>Sunday</p>
+                        </li>
+                        <li class="date">
+                          <p>09 Feb</p>
+                        </li>
+                        <li>
+                            <svg class="weather_icon">
+                                <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                                </use>
+                            </svg>
+                        </li>
+                        <li class="current_city_item stick">
+                          <span class="temperature_range">min</span>
+                          <p class="temperature_degree">-2&deg</p>
+                        </li>
+                        <li class="current_city_item">
+                          <span class="temperature_range">max</span>
+                          <p class="temperature_degree">1&deg</p>
+                        </li>
+                        <li>
+                          <button type="button">more info</button>
+                        </li>
+                    </ul>
+                </li>
+                <li class="">
+                  <ul class="five_days_list">
+                    <li class="day_one">
+                        <ul class="">
+                            <li class="day_of_week">
+                                <p>Sunday</p>
+                            </li>
+                            <li class="date">
+                              <p>09 Feb</p>
+                            </li>
+                            <li>
+                                <svg class="weather_icon">
+                                    <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                                    </use>
+                                </svg>
+                            </li>
+                            <li class="current_city_item stick">
+                              <span class="temperature_range">min</span>
+                              <p class="temperature_degree">-2&deg</p>
+                            </li>
+                            <li class="current_city_item">
+                              <span class="temperature_range">max</span>
+                              <p class="temperature_degree">1&deg</p>
+                            </li>
+                            <li>
+                              <button type="button">more info</button>
+                            </li>
+                        </ul>
+                </li>
+                <li class="">
+                  <ul class="five_days_list">
+                    <li class="day_one">
+                        <ul class="">
+                            <li class="day_of_week">
+                                <p>Sunday</p>
+                            </li>
+                            <li class="date">
+                              <p>09 Feb</p>
+                            </li>
+                            <li>
+                                <svg class="weather_icon">
+                                    <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                                    </use>
+                                </svg>
+                            </li>
+                            <li class="current_city_item stick">
+                              <span class="temperature_range">min</span>
+                              <p class="temperature_degree">-2&deg</p>
+                            </li>
+                            <li class="current_city_item">
+                              <span class="temperature_range">max</span>
+                              <p class="temperature_degree">1&deg</p>
+                            </li>
+                            <li>
+                              <button type="button">more info</button>
+                            </li>
+                        </ul>
+                </li>
+                <li class="">
+
+                </li>
+                <li class="">
+
+                </li>
+            </ul>
+
+            <button class="btn_previous_days"></button>
+            <button class="btn_next_days"></button>
+
+            </div>
+
+            </div>
+
+            <div class="chart_block">
+
+              <button class="btn_hide_chart">Hide Chart</button>
+
+            </div>
+
   </main>
 
 </body>
