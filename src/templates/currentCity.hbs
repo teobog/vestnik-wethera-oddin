@@ -1,0 +1,28 @@
+<li class="current_city_item">
+    <svg class="weather_icon">
+        <use href={{wearherIcon}}></use>
+    </svg>
+</li>
+
+<li class="current_city_item">
+    <h2 class="current_city_title">{{name}}, <span class="current_country_title">{{country}}</span></h2>
+</li>
+<li class="current_city_item">
+    <ul class="current_temperature_list">
+        <li class="current_temperature_item">
+            <p class="current_temperature_text"> {{temp}}</p>
+        </li>
+        <li class="current_temperature_item">
+            <ul class="current_temperature_range">
+                <li class="range_item_min">
+                    <span class="temperature_range">min</span>
+                    <p class="temperature_degree">{{temp_min}}</p>
+                </li>
+                <li class="range_item_max">
+                    <span class="temperature_range">max</span>
+                    <p class="temperature_degree">{{temp_max}}</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</li>

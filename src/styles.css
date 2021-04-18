@@ -131,7 +131,7 @@ a {
   font-size: 12px;
   line-height: 14px;
   text-decoration-line: underline;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .fav_country_item:not(:last-child) {
@@ -157,7 +157,7 @@ a {
 }
 
 /* ----------------------------------MAIN-------------------- */
-h1 {
+/* h1 {
   visibility: hidden;
   width: 0;
   height: 0;
@@ -189,7 +189,7 @@ h1 {
   border-right: 1px solid white;
 }
 
-.current_city_item:nth-child(-n+2) {
+.current_city_item:nth-child(-n + 2) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -205,7 +205,7 @@ h1 {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  color: #767D85;
+  color: #767d85;
 }
 
 .current_temperature_text {
@@ -215,25 +215,122 @@ h1 {
   font-size: 45px;
   line-height: 54px;
   letter-spacing: 1.2;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .temperature_range {
   font-family: Lato;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 17px;
-color: #767D85;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #767d85;
 }
 
 .temperature_degree {
   font-family: Lato;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 19px;
-color: #FFFFFF;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+} */
+h1 {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.current_city {
+  margin: 0 auto;
+  padding: 30px 56px;
+  background: #102136;
+  box-shadow: 0px 5px 33px rgba(16, 33, 54, 0.6);
+  border-radius: 34px;
+  margin-bottom: 30px;
+}
+
+.current_city_list {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.current_city_title {
+  margin-bottom: 30px;
+  margin-top: 5px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #767d85;
+}
+
+.current_temperature_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 170px;
+}
+
+.current_temperature_text {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 45px;
+  line-height: 54px;
+  letter-spacing: 1.2;
+  color: #ffffff;
+}
+
+.current_temperature_range {
+  display: flex;
+  width: 75px;
+  justify-content: space-between;
+}
+
+.temperature_range {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #767d85;
+}
+
+.range_item_min {
+  position: relative;
+}
+
+.range_item_min::after {
+  content: '';
+  border: 1px solid #ffffff;
+  position: absolute;
+  top: 5px;
+  left: 35px;
+  height: 35px;
+}
+
+.current_temperature_text {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 45px;
+  line-height: 54px;
+  letter-spacing: 1.2;
+  color: #ffffff;
+}
+
+.temperature_degree {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
 }
 
 .button_block {
@@ -355,21 +452,18 @@ color: #FFFFFF;
   background-color: transparent;
 }
 
-
 .full_info_list {
   display: flex;
 }
-
 
 /* ----------------------------------------------CHART BLOCK-------------------------- */
 
 .chart_block {
   height: 516px;
   background: rgba(16, 33, 54, 0.8);
-box-shadow: 0px 5px 33px rgba(16, 33, 54, 0.6);
-border-radius: 34px;
+  box-shadow: 0px 5px 33px rgba(16, 33, 54, 0.6);
+  border-radius: 34px;
 }
-
 
 /* ---------------------------для скролла---------------------   */
 
@@ -389,7 +483,6 @@ border-radius: 34px;
 } */
 
 /* ------------------------------------------------------------------ */
-
 
 /* .extra_deys_block {
   margin-bottom: 20px;
@@ -441,8 +534,7 @@ border-radius: 34px;
   }
 } */
 
-
-#myChart{
+#myChart {
   width: 500px;
   height: 500px;
 }
