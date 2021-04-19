@@ -11,7 +11,6 @@ import './js/currentCity.js'
 
 
 
-
 // let getEl = x => document.querySelector(x)
 
 // getEl('.input_nav').addEventListener('change', cityRequest)

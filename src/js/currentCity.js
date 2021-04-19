@@ -8,7 +8,6 @@ const ref = {
 ref.serchQuery.addEventListener('input', debounce(cityRequest,500));
 
 
-
 function cityRequest(e) {
     let serchQuery = (e.target.value);
     if (serchQuery != '') {
