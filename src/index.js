@@ -1,5 +1,6 @@
 import './styles.css';
-import './js/chart'
+import './js/chart';
+import './js/time.js';
 
 
 let getEl = x => document.querySelector(x)
