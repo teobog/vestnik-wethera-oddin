@@ -1,15 +1,7 @@
 import './styles.css';
 import './js/chart'
 import './js/currentCity.js'
-
-
-
-
-
-
-
-
-
+import './js/time'
 
 // let getEl = x => document.querySelector(x)
 
