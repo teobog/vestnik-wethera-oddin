@@ -14,11 +14,21 @@ function quotesData() {
 quotesData()
 
 function quotesCreator({quote:{author,body}}) {
-    quotesRender(author, body);
+    filterLength(author,body)
+}
+
+function filterLength(author,body) {
+    const lengText = body.split(' ').length;
+    console.log(lengText);
+    if (lengText > 6 && lengText < 30) {
+       quotesRender(author, body) 
+    } else {
+        return quotesData()
+    }
 }
 
 function quotesRender(author, body) {
-    ref.quotesDiv.innerHTML = quotesTemplate({ author, body });
+    ref.quotesDiv.innerHTML = quotesTemplate({ author, body });  
 }
 
 
