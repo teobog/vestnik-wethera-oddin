@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="header ">
+<header class="header">
 
   <div class="container">
     <div class="input_container">
@@ -59,37 +59,6 @@
   <!-- -----------------------------------MAIN---------------------------------- -->
 
   <h1>weather forecast</h1>
-  <!-- <div class="current_city_desktop">
-    <ul class="current_city_list">
-      <li class="current_city_item">
-        <svg class="weather_icon">
-          <use href="./images/symbol-defs.svg#icon-cloud-wc"></use>
-        </svg>
-      </li>
-      <li class="current_city_item">
-        <h2 class="current_city_title">Kyiv, <span class="current_country_title">UA</span></h2>
-      </li>
-      <li class="current_city_item">
-        <ul class="current_temperature_list">
-          <li class="current_temperature_item">
-            <p class="current_temperature_text">-3</p>
-          </li>
-          <li class="current_temperature_item">
-            <ul class="current_temperature_range">
-              <li class="range_item_min">
-                <span class="temperature_range">min</span>
-                <p class="current_temperature_degree">-2&deg;</p>
-              </li>
-              <li class="range_item_max">
-                <span class="temperature_range">max</span>
-                <p class="current_temperature_degree">1&deg;</p>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div> -->
   <div class="container">  
     <div class="current_city">
       <ul class="current_city_list">
@@ -126,10 +95,10 @@
 
     <ul class="button_block">
       <li>
-        <button class="btn_today">TODAY</button>
+        <button class="btn_today active">TODAY</button>
       </li>
       <li>
-        <button class="btn_five_days">5 DAYS</button>
+        <button class="btn_five_days unactive">5 DAYS</button>
       </li>
     </ul>
 
@@ -175,12 +144,228 @@
     </div>
 
     <div class="quotes">
-      <p class="quote_text">Who cares about the clouds when we're together? Just sing a song and bring the sunny
+      <p class="quote_text">Who cares about the clouds when<br> we're together? Just sing a song and<br> bring the sunny
         weather.</p>
       <p class="quote_owner">Dale Evans</p>
     </div>
 
     <!-- ----------------------------------------FIVE DAYS BLOCK--------------------------------------------------------- -->
+
+    
+      <!-- <ul class="button_block button_block_desktop">
+      <li>
+        <button class="btn_today unactive">TODAY</button>
+      </li>
+      <li>
+        <button class="btn_five_days active">5 DAYS</button>
+      </li>
+    </ul>
+
+
+    <h2 class="five_days_tablet">Kyiv, <span class="five_days_country_title">UA</span></h2>
+
+    <div class="five_days_block">
+
+      <div class="h2_container">
+        <h2 class="five_days_city_title">Kyiv, <span class="five_days_country_title">UA</span></h2>
+      </div>
+
+      <ul class="five_days_list">
+        <li class="day_one">
+          <ul class="">
+            <li class="day_of_week">
+              <p class="days_text">Sunday</p>
+            </li>
+            <li class="date">
+              <p class="five_days_date_text">09 Feb</p>
+            </li>
+            <li class="weather_icon_item">
+              <svg class="weather_icon">
+                <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                </use>
+              </svg>
+            </li>
+            <li>
+              <ul class="five_days_range_list">
+                <li class="fd_range_min">
+                  <span class="temperature_range">min</span>
+                  <p class="temperature_degree">-2&deg; </p>
+                </li>
+                <li class="fd_range_max">
+                  <span class="temperature_range">max</span>
+                  <p class="temperature_degree">1&deg;</p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button class="more_info_button" type="button">more info</button>
+            </li>
+          </ul>
+        </li>
+        <li class="day_one">
+          <ul class="">
+            <li class="day_of_week">
+              <p class="days_text">Monday</p>
+            </li>
+            <li class="date">
+              <p class="five_days_date_text">10 Feb</p>
+            </li>
+            <li class="weather_icon_item">
+              <svg class="weather_icon">
+                <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                </use>
+              </svg>
+            </li>
+            <li>
+              <ul class="five_days_range_list">
+                <li class="fd_range_min">
+                  <span class="temperature_range">min</span>
+                  <p class="temperature_degree">-2&deg; </p>
+                </li>
+                <li class="fd_range_max">
+                  <span class="temperature_range">max</span>
+                  <p class="temperature_degree">1&deg;</p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button class="more_info_button" type="button">more info</button>
+            </li>
+          </ul>
+        </li>
+        <li class="day_one">
+          <ul class="">
+            <li class="day_of_week">
+              <p class="days_text">Tuesday</p>
+            </li>
+            <li class="date">
+              <p class="five_days_date_text">11 Feb</p>
+            </li>
+            <li class="weather_icon_item">
+              <svg class="weather_icon">
+                <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                </use>
+              </svg>
+            </li>
+            <li>
+              <ul class="five_days_range_list">
+                <li class="fd_range_min">
+                  <span class="temperature_range">min</span>
+                  <p class="temperature_degree">-2&deg; </p>
+                </li>
+                <li class="fd_range_max">
+                  <span class="temperature_range">max</span>
+                  <p class="temperature_degree">1&deg;</p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button class="more_info_button" type="button">more info</button>
+            </li>
+          </ul>
+        </li>
+        <li class="day_one">
+          <ul class="">
+            <li class="day_of_week">
+              <p class="days_text">Tuesday</p>
+            </li>
+            <li class="date">
+              <p class="five_days_date_text">11 Feb</p>
+            </li>
+            <li class="weather_icon_item">
+              <svg class="weather_icon">
+                <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                </use>
+              </svg>
+            </li>
+            <li>
+              <ul class="five_days_range_list">
+                <li class="fd_range_min">
+                  <span class="temperature_range">min</span>
+                  <p class="temperature_degree">-2&deg; </p>
+                </li>
+                <li class="fd_range_max">
+                  <span class="temperature_range">max</span>
+                  <p class="temperature_degree">1&deg;</p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button class="more_info_button" type="button">more info</button>
+            </li>
+          </ul>
+        </li>
+        <li class="day_one">
+          <ul class="">
+            <li class="day_of_week">
+              <p class="days_text">Tuesday</p>
+            </li>
+            <li class="date">
+              <p class="five_days_date_text">11 Feb</p>
+            </li>
+            <li class="weather_icon_item">
+              <svg class="weather_icon">
+                <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                </use>
+              </svg>
+            </li>
+            <li>
+              <ul class="five_days_range_list">
+                <li class="fd_range_min">
+                  <span class="temperature_range">min</span>
+                  <p class="temperature_degree">-2&deg; </p>
+                </li>
+                <li class="fd_range_max">
+                  <span class="temperature_range">max</span>
+                  <p class="temperature_degree">1&deg;</p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button class="more_info_button" type="button">more info</button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    <ul class="five_days_slider">
+      <li>
+        <button class="btn_previous_days"></button>
+        <svg class="previous_day_icon">
+          <use href="./images/symbol-defs.svg#icon-arrow"></use>
+        </svg>
+      </li>
+      <li>
+        <button class="btn_next_days"></button>
+        <svg class="next_day_icon">
+          <use href="./images/symbol-defs.svg#icon-arrow"></use>
+        </svg>
+      </li>
+      </ul>
+
+    </div>
+
+    <div class="btn_chart_block">
+      <button class="btn_show_chart">Show Chart</button>
+      <div class="btn_chart_circle">
+        <svg class="show_chart_icon">
+          <use href="./images/symbol-defs.svg#icon-arrow"></use>
+        </svg>
+      </div>
+    </div> -->
+
+    <!-- --------------------------------Full INFO Block----------------------------------- -->
+
+
+    <!-- <ul class="button_block button_block_desktop">
+      <li>
+        <button class="btn_today unactive">TODAY</button>
+      </li>
+      <li>
+        <button class="btn_five_days active">5 DAYS</button>
+      </li>
+    </ul>
+
 
     <h2 class="five_days_tablet">Kyiv, <span class="five_days_country_title">UA</span></h2>
 
@@ -281,78 +466,13 @@
             </li>
           </ul>
         </li>
-      </ul>
-
-    <ul class="five_days_slider">
-      <li>
-        <button class="btn_previous_days"></button>
-        <svg class="previous_day_icon">
-          <use href="./images/symbol-defs.svg#icon-arrow"></use>
-        </svg>
-      </li>
-      <li>
-        <button class="btn_next_days"></button>
-        <svg class="next_day_icon">
-          <use href="./images/symbol-defs.svg#icon-arrow"></use>
-        </svg>
-      </li>
-      </ul>
-
-    </div>
-
-    <div class="btn_chart_block">
-      <button class="btn_show_chart">Show Chart</button>
-      <div class="btn_chart_circle">
-        <svg class="show_chart_icon">
-          <use href="./images/symbol-defs.svg#icon-arrow"></use>
-        </svg>
-      </div>
-    </div>
-
-    <!-- --------------------------------Full INFO Block----------------------------------- -->
-
-    <div class="five_days_block">
-
-      <h2 class="five_days_city_title">Kyiv, <span class="five_days_country_title">UA</span></h2>
-      <ul class="five_days_list">
         <li class="day_one">
           <ul class="">
             <li class="day_of_week">
-              <p class="days_text">Sunday</p>
+              <p class="days_text">Tuesday</p>
             </li>
             <li class="date">
-              <p class="five_days_date_text">09 Feb</p>
-            </li>
-            <li class="weather_icon_item">
-              <svg class="weather_icon">
-                <use href='./images/symbol-defs.svg#icon-cloud-wc'>
-                </use>
-              </svg>
-            </li>
-            <li>
-              <ul class="five_days_range_list">
-                <li class="fd_range_min">
-                  <span class="temperature_range">min</span>
-                  <p class="temperature_degree">-2&deg; </p>
-                </li>
-                <li class="fd_range_max">
-                  <span class="temperature_range">max</span>
-                  <p class="temperature_degree">1&deg;</p>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <button class="more_info_button" type="button">more info</button>
-            </li>
-          </ul>
-        </li>
-        <li class="day_one">
-          <ul class="">
-            <li class="day_of_week">
-              <p class="days_text">Monday</p>
-            </li>
-            <li class="date">
-              <p class="five_days_date_text">10 Feb</p>
+              <p class="five_days_date_text">11 Feb</p>
             </li>
             <li class="weather_icon_item">
               <svg class="weather_icon">
@@ -495,6 +615,176 @@
               </li>
             </ul>
           </li>
+          <li class="full_info_card">
+            <ul>
+              <li class="fi_time_item">
+                <p class="fi_card_time">00:00</p>
+              </li>
+              <li class="fi_card_icon">
+                <svg class="weather_icon">
+                  <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                  </use>
+                </svg>
+              </li>
+              <li class="fi_temperature_item">
+                <p class="full_info_temperature">-2&deg;</p>
+              </li>
+              <li class="atmospheric_pressure_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                </svg>
+                <p>772 mm</p>
+              </li>
+              <li class="humidity_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                </svg>
+                <p>54%</p>
+              </li>
+              <li class="wind_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-wind"></use>
+                </svg>
+                <p>3.7 m/s</p>
+              </li>
+            </ul>
+          </li>
+          <li class="full_info_card">
+            <ul>
+              <li class="fi_time_item">
+                <p class="fi_card_time">00:00</p>
+              </li>
+              <li class="fi_card_icon">
+                <svg class="weather_icon">
+                  <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                  </use>
+                </svg>
+              </li>
+              <li class="fi_temperature_item">
+                <p class="full_info_temperature">-2&deg;</p>
+              </li>
+              <li class="atmospheric_pressure_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                </svg>
+                <p>772 mm</p>
+              </li>
+              <li class="humidity_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                </svg>
+                <p>54%</p>
+              </li>
+              <li class="wind_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-wind"></use>
+                </svg>
+                <p>3.7 m/s</p>
+              </li>
+            </ul>
+          </li>
+          <li class="full_info_card">
+            <ul>
+              <li class="fi_time_item">
+                <p class="fi_card_time">00:00</p>
+              </li>
+              <li class="fi_card_icon">
+                <svg class="weather_icon">
+                  <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                  </use>
+                </svg>
+              </li>
+              <li class="fi_temperature_item">
+                <p class="full_info_temperature">-2&deg;</p>
+              </li>
+              <li class="atmospheric_pressure_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                </svg>
+                <p>772 mm</p>
+              </li>
+              <li class="humidity_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                </svg>
+                <p>54%</p>
+              </li>
+              <li class="wind_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-wind"></use>
+                </svg>
+                <p>3.7 m/s</p>
+              </li>
+            </ul>
+          </li>
+          <li class="full_info_card">
+            <ul>
+              <li class="fi_time_item">
+                <p class="fi_card_time">00:00</p>
+              </li>
+              <li class="fi_card_icon">
+                <svg class="weather_icon">
+                  <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                  </use>
+                </svg>
+              </li>
+              <li class="fi_temperature_item">
+                <p class="full_info_temperature">-2&deg;</p>
+              </li>
+              <li class="atmospheric_pressure_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                </svg>
+                <p>772 mm</p>
+              </li>
+              <li class="humidity_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                </svg>
+                <p>54%</p>
+              </li>
+              <li class="wind_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-wind"></use>
+                </svg>
+                <p>3.7 m/s</p>
+              </li>
+            </ul>
+          </li>
+          <li class="full_info_card">
+            <ul>
+              <li class="fi_time_item">
+                <p class="fi_card_time">00:00</p>
+              </li>
+              <li class="fi_card_icon">
+                <svg class="weather_icon">
+                  <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                  </use>
+                </svg>
+              </li>
+              <li class="fi_temperature_item">
+                <p class="full_info_temperature">-2&deg;</p>
+              </li>
+              <li class="atmospheric_pressure_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                </svg>
+                <p>772 mm</p>
+              </li>
+              <li class="humidity_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                </svg>
+                <p>54%</p>
+              </li>
+              <li class="wind_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-wind"></use>
+                </svg>
+                <p>3.7 m/s</p>
+              </li>
+            </ul>
+          </li>
             </ul>
 
       </div>
@@ -509,9 +799,21 @@
             <use href="./images/symbol-defs.svg#icon-arrow"></use>
           </svg>
         </div>
-      </div>
+      </div> -->
 
     <!-- --------------------------------------------CHART BLOCK--------------------------- -->
+
+    <!-- <ul class="button_block button_block_desktop">
+      <li>
+        <button class="btn_today unactive">TODAY</button>
+      </li>
+      <li>
+        <button class="btn_five_days active">5 DAYS</button>
+      </li>
+    </ul>
+
+
+    <h2 class="five_days_tablet">Kyiv, <span class="five_days_country_title">UA</span></h2>
 
     <div class="five_days_block">
 
@@ -610,24 +912,340 @@
             </li>
           </ul>
         </li>
+        <li class="day_one">
+          <ul class="">
+            <li class="day_of_week">
+              <p class="days_text">Tuesday</p>
+            </li>
+            <li class="date">
+              <p class="five_days_date_text">11 Feb</p>
+            </li>
+            <li class="weather_icon_item">
+              <svg class="weather_icon">
+                <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                </use>
+              </svg>
+            </li>
+            <li>
+              <ul class="five_days_range_list">
+                <li class="fd_range_min">
+                  <span class="temperature_range">min</span>
+                  <p class="temperature_degree">-2&deg; </p>
+                </li>
+                <li class="fd_range_max">
+                  <span class="temperature_range">max</span>
+                  <p class="temperature_degree">1&deg;</p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button class="more_info_button" type="button">more info</button>
+            </li>
+          </ul>
+        </li>
+        <li class="day_one">
+          <ul class="">
+            <li class="day_of_week">
+              <p class="days_text">Tuesday</p>
+            </li>
+            <li class="date">
+              <p class="five_days_date_text">11 Feb</p>
+            </li>
+            <li class="weather_icon_item">
+              <svg class="weather_icon">
+                <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                </use>
+              </svg>
+            </li>
+            <li>
+              <ul class="five_days_range_list">
+                <li class="fd_range_min">
+                  <span class="temperature_range">min</span>
+                  <p class="temperature_degree">-2&deg; </p>
+                </li>
+                <li class="fd_range_max">
+                  <span class="temperature_range">max</span>
+                  <p class="temperature_degree">1&deg;</p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button class="more_info_button" type="button">more info</button>
+            </li>
+          </ul>
+        </li>
       </ul>
 
-    <ul class="five_days_slider">
-      <li>
-        <button class="btn_previous_days"></button>
-        <svg class="previous_day_icon">
-          <use href="./images/symbol-defs.svg#icon-arrow"></use>
-        </svg>
-      </li>
-      <li>
-        <button class="btn_next_days"></button>
-        <svg class="next_day_icon">
-          <use href="./images/symbol-defs.svg#icon-arrow"></use>
-        </svg>
-      </li>
-      </ul>
+      <ul class="five_days_slider">
+        <li>
+          <button class="btn_previous_days"></button>
+          <svg class="previous_day_icon">
+            <use href="./images/symbol-defs.svg#icon-arrow"></use>
+          </svg>
+        </li>
+        <li>
+          <button class="btn_next_days"></button>
+          <svg class="next_day_icon">
+            <use href="./images/symbol-defs.svg#icon-arrow"></use>
+          </svg>
+        </li>
+        </ul>
 
-    </div>
+      <div class="full_info_container">
+        <ul class="full_info_list">
+          <li class="full_info_card">
+            <ul>
+              <li class="fi_time_item">
+                <p class="fi_card_time">00:00</p>
+              </li>
+              <li class="fi_card_icon">
+                <svg class="weather_icon">
+                  <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                  </use>
+                </svg>
+              </li>
+              <li class="fi_temperature_item">
+                <p class="full_info_temperature">-2&deg;</p>
+              </li>
+              <li class="atmospheric_pressure_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                </svg>
+                <p>772 mm</p>
+              </li>
+              <li class="humidity_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                </svg>
+                <p>54%</p>
+              </li>
+              <li class="wind_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-wind"></use>
+                </svg>
+                <p>3.7 m/s</p>
+              </li>
+            </ul>
+          </li>
+          <li class="full_info_card">
+            <ul>
+              <li class="fi_time_item">
+                <p class="fi_card_time">00:00</p>
+              </li>
+              <li class="fi_card_icon">
+                <svg class="weather_icon">
+                  <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                  </use>
+                </svg>
+              </li>
+              <li class="fi_temperature_item">
+                <p class="full_info_temperature">-5&deg;</p>
+              </li>
+              <li class="atmospheric_pressure_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                </svg>
+                <p>772 mm</p>
+              </li>
+              <li class="humidity_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                </svg>
+                <p>54%</p>
+              </li>
+              <li class="wind_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-wind"></use>
+                </svg>
+                <p>3.7 m/s</p>
+              </li>
+            </ul>
+          </li>
+          <li class="full_info_card">
+            <ul>
+              <li class="fi_time_item">
+                <p class="fi_card_time">00:00</p>
+              </li>
+              <li class="fi_card_icon">
+                <svg class="weather_icon">
+                  <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                  </use>
+                </svg>
+              </li>
+              <li class="fi_temperature_item">
+                <p class="full_info_temperature">-2&deg;</p>
+              </li>
+              <li class="atmospheric_pressure_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                </svg>
+                <p>772 mm</p>
+              </li>
+              <li class="humidity_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                </svg>
+                <p>54%</p>
+              </li>
+              <li class="wind_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-wind"></use>
+                </svg>
+                <p>3.7 m/s</p>
+              </li>
+            </ul>
+          </li>
+          <li class="full_info_card">
+            <ul>
+              <li class="fi_time_item">
+                <p class="fi_card_time">00:00</p>
+              </li>
+              <li class="fi_card_icon">
+                <svg class="weather_icon">
+                  <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                  </use>
+                </svg>
+              </li>
+              <li class="fi_temperature_item">
+                <p class="full_info_temperature">-2&deg;</p>
+              </li>
+              <li class="atmospheric_pressure_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                </svg>
+                <p>772 mm</p>
+              </li>
+              <li class="humidity_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                </svg>
+                <p>54%</p>
+              </li>
+              <li class="wind_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-wind"></use>
+                </svg>
+                <p>3.7 m/s</p>
+              </li>
+            </ul>
+          </li>
+          <li class="full_info_card">
+            <ul>
+              <li class="fi_time_item">
+                <p class="fi_card_time">00:00</p>
+              </li>
+              <li class="fi_card_icon">
+                <svg class="weather_icon">
+                  <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                  </use>
+                </svg>
+              </li>
+              <li class="fi_temperature_item">
+                <p class="full_info_temperature">-2&deg;</p>
+              </li>
+              <li class="atmospheric_pressure_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                </svg>
+                <p>772 mm</p>
+              </li>
+              <li class="humidity_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                </svg>
+                <p>54%</p>
+              </li>
+              <li class="wind_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-wind"></use>
+                </svg>
+                <p>3.7 m/s</p>
+              </li>
+            </ul>
+          </li>
+          <li class="full_info_card">
+            <ul>
+              <li class="fi_time_item">
+                <p class="fi_card_time">00:00</p>
+              </li>
+              <li class="fi_card_icon">
+                <svg class="weather_icon">
+                  <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                  </use>
+                </svg>
+              </li>
+              <li class="fi_temperature_item">
+                <p class="full_info_temperature">-2&deg;</p>
+              </li>
+              <li class="atmospheric_pressure_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                </svg>
+                <p>772 mm</p>
+              </li>
+              <li class="humidity_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                </svg>
+                <p>54%</p>
+              </li>
+              <li class="wind_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-wind"></use>
+                </svg>
+                <p>3.7 m/s</p>
+              </li>
+            </ul>
+          </li>
+          <li class="full_info_card">
+            <ul>
+              <li class="fi_time_item">
+                <p class="fi_card_time">00:00</p>
+              </li>
+              <li class="fi_card_icon">
+                <svg class="weather_icon">
+                  <use href='./images/symbol-defs.svg#icon-cloud-wc'>
+                  </use>
+                </svg>
+              </li>
+              <li class="fi_temperature_item">
+                <p class="full_info_temperature">-2&deg;</p>
+              </li>
+              <li class="atmospheric_pressure_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-barometer"></use>
+                </svg>
+                <p>772 mm</p>
+              </li>
+              <li class="humidity_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-humidity"></use>
+                </svg>
+                <p>54%</p>
+              </li>
+              <li class="wind_item">
+                <svg class="full_info_icon">
+                  <use href="./images/symbol-defs.svg#icon-wind"></use>
+                </svg>
+                <p>3.7 m/s</p>
+              </li>
+            </ul>
+          </li>
+            </ul>
+
+      </div>
+
+      </div>
+    
+
+      <div class="btn_chart_block">
+        <button class="btn_show_chart">Show Chart</button>
+        <div class="btn_chart_circle">
+          <svg class="show_chart_icon">
+            <use href="./images/symbol-defs.svg#icon-arrow"></use>
+          </svg>
+        </div>
+      </div>
 
     <div class="chart_block">
 
@@ -643,7 +1261,7 @@
 
     </div>
 
-  </div>
+  </div> -->
 
 </main>
 

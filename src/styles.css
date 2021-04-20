@@ -11,7 +11,6 @@ img {
   display: block;
   width: 100%;
   height: auto;
-  
 }
 h1,
 h2,
@@ -52,6 +51,10 @@ a {
   width: 20px;
   height: 20px;
   fill: rgba(255, 255, 255, 0.54);
+}
+
+.body {
+  position: relative;
 }
 
 /* -------------------HEADER------------------- */
@@ -195,10 +198,6 @@ h1 {
   height: 0;
 }
 
-.current_city_desktop {
-  display: none;
-}
-
 .current_city {
   margin: 0 auto;
   padding: 30px 56px;
@@ -297,6 +296,7 @@ color: #767D85;
   margin-bottom: 30px;
   justify-content: space-between;
 }
+
 .btn_today {
   justify-content: center;
   align-items: center;
@@ -307,6 +307,14 @@ color: #767D85;
   border-radius: 20px;
   margin: 0 auto;
   border: none;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
 }
 .btn_five_days {
   justify-content: center;
@@ -317,7 +325,26 @@ color: #767D85;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   border: none;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
 }
+
+.active {
+  background: #ffffff;
+  color: #000000;
+}
+
+.unactive {
+  background: rgba(255, 255, 255, 0.5);
+  color: #000000;
+}
+
 .block_date {
   margin: 0 auto;
   margin-bottom: 30px;
@@ -888,78 +915,6 @@ color: #767D85;
   border-radius: 34px;
 }
 
-
-/* ---------------------------для скролла---------------------   */
-
-/* .full_info_list {
-  display: flex;
-  flex-wrap: no-wrap;
-  overflow-x: auto;
-  margin: 20px;
-} */
-
-/* .card {
-  display: inline-block;
-  padding-top: 15px;
-  padding-bottom: 20px;
-  padding-right: 15px;
-  padding-left: 15px;
-} */
-
-/* ------------------------------------------------------------------ */
-
-
-/* .extra_deys_block {
-  margin-bottom: 20px;
-  height: 540px;
-  background: rgba(16, 33, 54, 0.8);
-  box-shadow: 0px 5px 33px rgba(16, 33, 54, 0.6);
-  border-radius: 34px;
-}
-
-
-
-@media screen and (min-width: 468px) {
-  .container {
-    max-width: 450px;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0 auto;
-  }
-  .input_form_city {
-    position: relative;
-  }
-  .input-location {
-    left: 20px;
-    top: 12px;
-  }
-  .location_icon {
-    left: 20px;
-    top: 12px;
-  }
-  .input_btn {
-    right: 24px;
-    top: 12px;
-  }
-  .favourites_icon {
-    display: block;
-    right: 24px;
-    top: 12px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 500px;
-  }
-}
-@media screen and (min-width: 1279px) {
-  .container {
-    min-width: 1200px;
-  }
-} */
-
-
 #myChart{
   width: 500px;
   height: 500px;
@@ -1039,7 +994,7 @@ color: #767D85;
 
   .fav_cities {
     position: relative;
-    margin-bottom: 380px;
+    margin-bottom: 110px;
   }
 
   .fav_country_item {
@@ -1194,6 +1149,13 @@ color: #767D85;
     color: #FFFFFF;
   }
 
+  .button_block_desktop {
+    width: 270px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
   .five_days_block {
     padding: 40px 20px;
   }
@@ -1239,9 +1201,11 @@ color: #767D85;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
+
 
   .container {
+    /* position: relative; */
     max-width: 1060px;
     padding-left: 0px;
     padding-right: 0px;
@@ -1259,10 +1223,6 @@ color: #767D85;
     width: 350px;
     margin-left: auto;
     margin-right: -40px;
-  }
-
-  .current_city {
-    display: none;
   }
 
   .input_form_city {
@@ -1328,17 +1288,42 @@ color: #767D85;
   }
 
   .current_city {
+    position: absolute;
+    right: 0;
     padding-top: 30px;
     padding-bottom: 35px;
-    width: 350px;
+    width: 400px;
+    margin: 0 0;
+    border-radius: 34px 0 0 34px;
   }
 
   .block_date {
-    margin-bottom: 40px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 500px;
     padding-top: 60px;
     padding-bottom: 40px;
     padding-left: 105px;
     padding-right: 105px;
+    margin: 0 0;
+    border-radius: 0 34px 0 0;
+  }
+
+  .button_block {
+    position: absolute;
+    right: 96px;
+    top: 600px;
+  }
+
+  .button_block_desktop {
+    position: absolute;
+    top: 290px;
+    left: 883px;
+    width: 270px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
   }
 
   .current_temperature_text {
@@ -1370,6 +1355,18 @@ color: #767D85;
 
   .range_item_min::after {
     left: 59px;
+  }
+
+  .date_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  .date_list_item:not(li:first-of-type) {
+    display: flex;
+    margin-right: 40px;
   }
 
   .date_item_text {
@@ -1424,8 +1421,13 @@ color: #767D85;
     margin-bottom: 30px;
   }
 
+  .quotes {
+    position: absolute;
+    right: 10%;
+    bottom: 5%;
+  }
+
   .quote_text {
-    padding-left: 270px;
     font-family: Lato;
     font-style: italic;
     font-weight: normal;
@@ -1434,6 +1436,11 @@ color: #767D85;
     text-align: right;
     letter-spacing: 0.04em;
     color: #FFFFFF;
+  }
+
+  .quote_owner {
+    width: 340px;
+    text-align: right;
   }
 
   .five_days_city_title {
@@ -1478,6 +1485,11 @@ color: #767D85;
     line-height: 17px;
     display: block;
     margin: 0 auto;
+  }
+
+  .more_info_button:hover,
+  .more_info_button:focus {
+    opacity: 1;
   }
 
   .weather_icon_item {
