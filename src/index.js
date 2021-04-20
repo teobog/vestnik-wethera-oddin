@@ -4,6 +4,7 @@ import './js/currentCity.js'
 import './js/fiveDays.js'
 import './js/time';
 import './js/quotes.js'
+import './js/moreInfo.js'
 
 
 // let getEl = x => document.querySelector(x)
