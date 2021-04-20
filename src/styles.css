@@ -655,7 +655,7 @@ color: #767D85;
   margin-bottom: 60px;
   width: 110px;
   justify-content: space-between;
-  
+
 }
 
 .btn_show_chart {
@@ -680,7 +680,7 @@ color: #767D85;
   height: 28px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.2);
-} 
+}
 
 .show_chart_icon {
   width: 10px;
@@ -1229,7 +1229,7 @@ color: #767D85;
     position: relative;
     width: 520px;
     margin: 0 auto;
-    
+
   }
 
   .input_container {
