@@ -9,7 +9,6 @@ function quotesData() {
     fetch(`https://favqs.com/api/qotd`)
         .then(response => response.json())
         .then(quotesCreator)
-    
 }
 quotesData()
 
