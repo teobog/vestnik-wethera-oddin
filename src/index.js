@@ -1,6 +1,7 @@
 import './styles.css';
 import './js/chart'
 import './js/currentCity.js'
+import './js/fiveDays.js'
 
 
 
