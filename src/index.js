@@ -1,8 +1,10 @@
 import './styles.css';
 import './js/chart'
 import './js/currentCity.js'
+import './js/fiveDays.js'
 import './js/time';
 import './js/quotes.js'
+
 
 // let getEl = x => document.querySelector(x)
 
