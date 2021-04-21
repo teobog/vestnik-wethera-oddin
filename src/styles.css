@@ -1576,10 +1576,11 @@ h1 {
     display: none;
   }
 }
-.is_active{
+.is_active {
   stroke: yellow;
   fill: yellow;
 }
+
 
 .is_close {
   display: none;
@@ -1604,3 +1605,12 @@ h1 {
 .fav_country_list::-webkit-scrollbar-button:horizontal:single-button:increment:hover {
   border-color: #777777 transparent transparent transparent;
 }
+.active_geo {
+  stroke: green;
+  fill: greenyellow;
+}
+
+.is_hidden {
+  display: none;
+}
+
