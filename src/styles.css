@@ -1499,3 +1499,12 @@ h1 {
     display: none;
   }
 }
+.is_active{
+  stroke: yellow;
+  fill: yellow;
+}
+.active_geo{
+  stroke: green;
+  fill: greenyellow;
+ }
+

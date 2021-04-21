@@ -15,7 +15,6 @@ import moreInfo from './moreInfo';
 ref.serchQuery.addEventListener('input', debounce(cityRequest,800));
 
 
-
 function cityRequest(e) {
     let serchQuery = (e.target.value);
     if (serchQuery != '') {
@@ -29,6 +28,7 @@ function cityRequest(e) {
  }
 
 
+
 function fetchCityWeather(serchQuery) {
 
 
@@ -36,6 +36,7 @@ function fetchCityWeather(serchQuery) {
         .then(res => res.json()).then(checkQuery).catch();
         
 }
+export default {fetchCityWeather, ref}
 
 
 function checkQuery(data) {
