@@ -113,6 +113,15 @@ a {
   top: 43px;
   fill: #7e8691;
 }
+.active_geo{
+  background-image: url("./images/symbol-defs.svg#icon-geolocation-1");
+  display: block;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 40px;
+  top: 43px;
+}
 .input_btn {
   display: block;
   position: absolute;
@@ -139,13 +148,29 @@ a {
   display: flex;
   margin-bottom: 65px;
   margin-left: 20px;
-  width: 72px;
-  height: 28px;
+  width: 80%;
+  margin: 0 auto;
+  /* height: 28px; */
 }
 
 .fav_country_list {
   display: flex;
+  width: 260px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  overflow-x: auto;
 }
+/* .fav_country_list::-webkit-scrollbar{
+
+height: 10px;             
+border: transparent;
+}
+.fav_country_list::-webkit-scrollbar-button{
+  border: 2px solid  rebeccapurple;
+  
+} */
+
 
 .fav_country_item {
   display: flex;
@@ -160,6 +185,7 @@ a {
   line-height: 14px;
   text-decoration-line: underline;
   color: #ffffff;
+  margin-bottom: 10px;
 }
 
 .fav_country_item:not(:last-child) {
@@ -927,6 +953,7 @@ h1 {
     position: relative;
   }
   .input-location {
+   position: absolute;
     left: 20px;
     top: 12px;
   }
@@ -934,15 +961,31 @@ h1 {
     left: 20px;
     top: 12px;
   }
+  .active_geo{
+    background-image: url("./images/symbol-defs.svg#icon-geolocation-1");
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 20px;
+    top: 12px;
+  }
   .input_btn {
     right: 24px;
     top: 12px;
   }
-
+ 
   .fav_cities {
     position: relative;
   }
-
+  .fav_country_list {
+    display: flex;
+    width: 80%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    justify-content: center;
+  }
   .favourites_icon {
     display: block;
     right: 24px;
@@ -969,6 +1012,15 @@ h1 {
     left: 20px;
     top: 12px;
   }
+  .fav_country_list {
+    display: flex;
+    width: 80%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    justify-content: center;
+  }
+
 
   .input_nav::placeholder {
     font-size: 18px;
@@ -976,6 +1028,15 @@ h1 {
   }
 
   .location_icon {
+    left: 20px;
+    top: 12px;
+  }
+  .active_geo{
+    background-image: url("./images/symbol-defs.svg#icon-geolocation-1");
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 22px;
     left: 20px;
     top: 12px;
   }
@@ -1240,11 +1301,27 @@ h1 {
     left: 20px;
     top: 12px;
   }
+  .active_geo{
+    background-image: url("./images/symbol-defs.svg#icon-geolocation-1");
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 20px;
+    top: 12px;
+  }
   .input_btn {
     right: 24px;
     top: 12px;
   }
-
+  .fav_country_list {
+    display: flex;
+    width: 80%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    justify-content: center;
+  }
   .fav_cities {
     position: relative;
     margin: 0 auto;
@@ -1503,8 +1580,27 @@ h1 {
   stroke: yellow;
   fill: yellow;
 }
-.active_geo{
-  stroke: green;
-  fill: greenyellow;
- }
 
+.is_close {
+  display: none;
+}
+
+
+
+  .fav_country_list::-webkit-scrollbar-button:single-button:horizontal:decrement {
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #555555 transparent;
+}
+
+.fav_country_list::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+  border-color: transparent transparent #777777 transparent;
+}
+
+.fav_country_list::-webkit-scrollbar-button:single-button:horizontal:increment {
+  border-width: 8px 8px 0 8px;
+  border-color: #555555 transparent transparent transparent;
+}
+
+.fav_country_list::-webkit-scrollbar-button:horizontal:single-button:increment:hover {
+  border-color: #777777 transparent transparent transparent;
+}

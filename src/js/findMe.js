@@ -6,6 +6,7 @@ const locate={
     inputLocation: document.querySelector('.input-location'),
     locationIcon: document.querySelector('.location_icon'),
     inputSearch: document.querySelector('.input_nav'),
+    locationIconActive:document.querySelector('.loc_active')
 
 }
 
@@ -17,6 +18,9 @@ locate.inputSearch.addEventListener("submit", function(event){
 locate.inputLocation.addEventListener("click", function(event){
     event.preventDefault();
 
+    locate.locationIcon.classList.remove("location_icon")
+    locate.locationIcon.classList.add("active_geo")
+    locate.locationIconActive.setAttribute('href', "./images/symbol-defs.svg#icon-geolocation-1")
     
     navigator.geolocation.getCurrentPosition(pos => {
         fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=9f82154cc61ca06904eb64ae2c103336`)
@@ -42,11 +46,7 @@ locate.inputLocation.addEventListener("click", function(event){
     }, error => console.log("Пожалуйста, разрешите доступ к использованию Вашей геопозиции!"));
 
 
-    locate.inputLocation.addEventListener('click', (event)=>{
-        event.preventDefault()
-    
-        locate.locationIcon.classList.add("active_geo")
-    })
+  
 
 
     
