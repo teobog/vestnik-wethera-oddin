@@ -1,6 +1,7 @@
 import currentCityTemplate from '../templates/currentCity.hbs';
 import debounce from 'lodash.debounce';
-import fiveDays from './fiveDays'
+import fiveDays from './fiveDays';
+import moreInfo from './moreInfo';
 
 
 
@@ -11,15 +12,16 @@ import fiveDays from './fiveDays'
      fiveDaysWeatherBlock: document.querySelector('.five_days_list'),
     
 };
-ref.serchQuery.addEventListener('input', debounce(cityRequest,500));
+ref.serchQuery.addEventListener('input', debounce(cityRequest,800));
 
-// export default {ref}
 
 function cityRequest(e) {
     let serchQuery = (e.target.value);
     if (serchQuery != '') {
-        fetchCityWeather(serchQuery)
-        fiveDays.fetchfiveDays(serchQuery)
+        fetchCityWeather(serchQuery);
+        fiveDays.fetchfiveDays(serchQuery);
+        moreInfo.fetchMoreInfo(serchQuery);
+        
     }
     
     
@@ -28,10 +30,10 @@ function cityRequest(e) {
 
 
 function fetchCityWeather(serchQuery) {
-     fiveDays.fetchfiveDays(serchQuery)
+
 
     return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${serchQuery}&appid=2b30446187616e7178e0cd559ea22385&units=metric`)
-        .then(res => res.json()).then(checkQuery).catch(console.log('ошибка'));
+        .then(res => res.json()).then(checkQuery).catch();
         
 }
 export default {fetchCityWeather, ref}
