@@ -52,7 +52,7 @@ function checkQuery(data) {
 }
 
 function dataProcessing({ name, sys: { country }, main: { temp, temp_min, temp_max }, weather }) {
-//    console.log(name,country,temp, temp_min, temp_max,weather[0].description);
+
 
     let roundTemp = Math.round(temp);
     let roundTemp_min = Math.round(temp_min);

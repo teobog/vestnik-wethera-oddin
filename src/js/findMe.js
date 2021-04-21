@@ -15,7 +15,7 @@ locate.inputSearch.addEventListener("submit", function(event){
     event.preventDefault()
   });
 
-locate.inputLocation.addEventListener("click",  function(event){
+locate.inputLocation.addEventListener("click", function(event){
     event.preventDefault();
 
     locate.locationIcon.classList.remove("location_icon")
