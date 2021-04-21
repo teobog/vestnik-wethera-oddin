@@ -1,0 +1,36 @@
+{{#each this}}
+<li class="full_info_card is_hidden" id={{number}}>
+    <ul>
+        <li class="fi_time_item">
+            <p class="fi_card_time">{{time}}</p>
+        </li>
+        <li class="fi_card_icon">
+            <svg class="weather_icon">
+                <use href={{icon}}>
+                </use>
+            </svg>
+        </li>
+        <li class="fi_temperature_item">
+            <p class="full_info_temperature">{{temp}}&deg;</p>
+        </li>
+        <li class="atmospheric_pressure_item">
+            <svg class="full_info_icon">
+                <use href="./images/symbol-defs.svg#icon-barometer"></use>
+            </svg>
+            <p>{{presure}} mm</p>
+        </li>
+        <li class="humidity_item">
+            <svg class="full_info_icon">
+                <use href="./images/symbol-defs.svg#icon-humidity"></use>
+            </svg>
+            <p>{{humidity}}%</p>
+        </li>
+        <li class="wind_item">
+            <svg class="full_info_icon">
+                <use href="./images/symbol-defs.svg#icon-wind"></use>
+            </svg>
+            <p>{{wind}} m/s</p>
+        </li>
+    </ul>
+</li>
+{{/each}}
