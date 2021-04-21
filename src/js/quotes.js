@@ -9,16 +9,25 @@ function quotesData() {
     fetch(`https://favqs.com/api/qotd`)
         .then(response => response.json())
         .then(quotesCreator)
-    
 }
 quotesData()
 
 function quotesCreator({quote:{author,body}}) {
-    quotesRender(author, body);
+    filterLength(author,body)
+}
+
+function filterLength(author,body) {
+    const lengText = body.split(' ').length;
+    console.log(lengText);
+    if (lengText > 6 && lengText < 30) {
+       quotesRender(author, body) 
+    } else {
+        return quotesData()
+    }
 }
 
 function quotesRender(author, body) {
-    ref.quotesDiv.innerHTML = quotesTemplate({ author, body });
+    ref.quotesDiv.innerHTML = quotesTemplate({ author, body });  
 }
 
 

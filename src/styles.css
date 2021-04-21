@@ -23,6 +23,8 @@ p {
   margin: 0;
 }
 body {
+  background-repeat: repeat;
+  background-size: cover;
   background-color: cadetblue;
   font-family: -apple-system, BlinkMacSystemFont, 'Lato' 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
@@ -89,7 +91,6 @@ a {
 .input_nav::-webkit-search-results-decoration {
   display: none;
 }
-
 
 .input-location {
   display: block;
@@ -158,7 +159,7 @@ a {
   font-size: 12px;
   line-height: 14px;
   text-decoration-line: underline;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .fav_country_item:not(:last-child) {
@@ -222,7 +223,7 @@ h1 {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  color: #767D85;
+  color: #767d85;
 }
 
 .current_temperature_list {
@@ -239,7 +240,7 @@ h1 {
   font-size: 45px;
   line-height: 54px;
   letter-spacing: 1.2;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .current_temperature_range {
@@ -250,11 +251,11 @@ h1 {
 
 .temperature_range {
   font-family: Lato;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 17px;
-color: #767D85;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #767d85;
 }
 
 .range_item_min {
@@ -262,8 +263,8 @@ color: #767D85;
 }
 
 .range_item_min::after {
-  content: "";
-  border: 1px solid #27384A;
+  content: '';
+  border: 1px solid #27384a;
   position: absolute;
   top: 5px;
   left: 35px;
@@ -277,7 +278,7 @@ color: #767D85;
   font-size: 45px;
   line-height: 54px;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .current_temperature_degree {
@@ -286,7 +287,7 @@ color: #767D85;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .button_block {
@@ -357,9 +358,8 @@ color: #767D85;
 .date_list {
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
 }
-
 
 .full_date_list {
   display: flex;
@@ -378,7 +378,7 @@ color: #767D85;
   line-height: 54px;
   text-align: center;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .day_of_week_text {
@@ -388,7 +388,7 @@ color: #767D85;
   font-size: 45px;
   line-height: 54px;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .month_time_list {
@@ -402,7 +402,7 @@ color: #767D85;
 }
 
 .month_time_item::after {
-  content: "";
+  content: '';
   border: 1px solid white;
   position: absolute;
   top: 0px;
@@ -422,7 +422,7 @@ color: #767D85;
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .time_text {
@@ -434,7 +434,7 @@ color: #767D85;
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .sunrise_sunset_list {
@@ -452,7 +452,7 @@ color: #767D85;
 }
 
 .sunrise_item::after {
-  content: "";
+  content: '';
   border: 1px solid white;
   position: absolute;
   top: 0px;
@@ -469,7 +469,7 @@ color: #767D85;
   margin-right: 10px;
   width: 20px;
   height: 20px;
-  fill: #FF6B09;
+  fill: #ff6b09;
 }
 
 .sunrise_text {
@@ -479,14 +479,14 @@ color: #767D85;
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .sunset_icon {
   margin-right: 10px;
   width: 20px;
   height: 20px;
-  fill: #FF6B09;
+  fill: #ff6b09;
 }
 
 .sunset_text {
@@ -496,7 +496,7 @@ color: #767D85;
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .quotes {
@@ -549,7 +549,7 @@ color: #767D85;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .five_days_list {
@@ -573,7 +573,7 @@ color: #767D85;
   line-height: 14px;
   text-align: center;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.55;
 }
 
@@ -585,7 +585,7 @@ color: #767D85;
   line-height: 19px;
   text-align: center;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .weather_icon_item {
@@ -605,7 +605,7 @@ color: #767D85;
 }
 
 .fd_range_min::after {
-  content: "";
+  content: '';
   border: 1px solid white;
   position: absolute;
   top: 6px;
@@ -614,7 +614,6 @@ color: #767D85;
   opacity: 0.4;
 }
 
-
 .temperature_range {
   font-family: Lato;
   font-style: normal;
@@ -622,7 +621,7 @@ color: #767D85;
   font-size: 12px;
   line-height: 14px;
   text-align: center;
-  color: #767D85;
+  color: #767d85;
 }
 
 .temperature_degree {
@@ -632,7 +631,7 @@ color: #767D85;
   font-size: 14px;
   line-height: 17px;
   text-align: center;
-  color: #FF6B09;
+  color: #ff6b09;
 }
 
 .more_info_button {
@@ -645,7 +644,7 @@ color: #767D85;
   line-height: 14px;
   text-align: center;
   text-decoration: underline;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.3;
 }
 
@@ -655,7 +654,6 @@ color: #767D85;
   margin-bottom: 60px;
   width: 110px;
   justify-content: space-between;
-
 }
 
 .btn_show_chart {
@@ -714,9 +712,7 @@ color: #767D85;
   transform: rotate(270deg);
   stroke: white;
   fill: transparent;
-
 }
-
 
 .btn_hide_chart {
   display: block;
@@ -734,8 +730,6 @@ color: #767D85;
   color: #ff6b09;
   background-color: transparent;
 }
-
-
 
 .five_days_slider {
   display: flex;
@@ -758,7 +752,7 @@ color: #767D85;
   width: 10px;
   height: 10px;
   fill: transparent;
-  stroke: #767D85;
+  stroke: #767d85;
   transform: rotate(180deg);
   opacity: 0.5;
 }
@@ -786,7 +780,7 @@ color: #767D85;
   width: 10px;
   height: 10px;
   fill: transparent;
-  stroke: #767D85;
+  stroke: #767d85;
   opacity: 0.5;
 }
 
@@ -828,7 +822,7 @@ color: #767D85;
   font-size: 14px;
   line-height: 17px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.54;
 }
 
@@ -848,7 +842,7 @@ color: #767D85;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  color: #FF6B09;
+  color: #ff6b09;
 }
 
 .atmospheric_pressure_item {
@@ -864,7 +858,7 @@ color: #767D85;
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.54;
 }
 
@@ -882,7 +876,7 @@ color: #767D85;
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.54;
 }
 
@@ -899,7 +893,7 @@ color: #767D85;
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.54;
 }
 
@@ -915,11 +909,10 @@ color: #767D85;
   border-radius: 34px;
 }
 
-#myChart{
+#myChart {
   width: 500px;
   height: 500px;
 }
-
 
 /* --------------------------------------------MEDIA---------------------------------- */
 
@@ -962,7 +955,6 @@ color: #767D85;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-
   .container {
     max-width: 620px;
     padding-left: 0px;
@@ -1128,7 +1120,7 @@ color: #767D85;
     line-height: 26px;
     text-align: right;
     letter-spacing: 0.04em;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   .five_days_city_title {
@@ -1146,7 +1138,7 @@ color: #767D85;
     display: block;
     text-align: center;
     letter-spacing: 0.04em;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   .button_block_desktop {
@@ -1202,8 +1194,6 @@ color: #767D85;
 }
 
 @media screen and (min-width: 1280px) {
-
-
   .container {
     /* position: relative; */
     max-width: 1060px;
@@ -1229,7 +1219,6 @@ color: #767D85;
     position: relative;
     width: 520px;
     margin: 0 auto;
-
   }
 
   .input_container {
@@ -1435,7 +1424,7 @@ color: #767D85;
     line-height: 26px;
     text-align: right;
     letter-spacing: 0.04em;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   .quote_owner {
@@ -1458,7 +1447,7 @@ color: #767D85;
     display: block;
     text-align: center;
     letter-spacing: 0.04em;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   .five_days_block {
