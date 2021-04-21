@@ -6,7 +6,7 @@ export default { fetchfiveDays };
 
  const ref = {
      fiveDaysWeatherBlock: document.querySelector('.five_days_list'),
-    fiveDaysTitle: document.querySelector('.title_container'),
+    fiveDaysTitle: document.querySelector('.h2_container'),
 
 };
 

@@ -13,7 +13,7 @@ import fiveDays from './fiveDays'
 };
 ref.serchQuery.addEventListener('input', debounce(cityRequest,500));
 
-export default {ref}
+// export default {ref}
 
 function cityRequest(e) {
     let serchQuery = (e.target.value);
@@ -26,6 +26,7 @@ function cityRequest(e) {
  }
 
 
+
 function fetchCityWeather(serchQuery) {
      fiveDays.fetchfiveDays(serchQuery)
 
@@ -33,6 +34,7 @@ function fetchCityWeather(serchQuery) {
         .then(res => res.json()).then(checkQuery).catch(console.log('ошибка'));
         
 }
+export default {fetchCityWeather, ref}
 
 
 function checkQuery(data) {
