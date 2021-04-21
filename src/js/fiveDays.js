@@ -1,12 +1,14 @@
 import fiveDaysTemplate from '../templates/fiveDays.hbs';
+import moreInfo from './moreInfo'
 
 export default {fetchfiveDays};
 
 const ref = {
   fiveDaysWeatherBlock: document.querySelector('.five_days_list'),
   fiveDaysTitle: document.querySelector('.h2_container'),
-
-};
+  moreInfoBtn: document.querySelector('.more_info_button'),
+  };
+// console.log(btn1);
 
 
 function fetchfiveDays(serchQuery) {
@@ -16,7 +18,7 @@ function fetchfiveDays(serchQuery) {
 }
 
 function checkQuery(data) {
-  console.log(data);
+  // console.log(data);
 
   if (data.cod === '404') {
     ref.fiveDaysWeatherBlock.innerHTML = '';
@@ -43,11 +45,41 @@ function checkQuery(data) {
   }
   dataProcessing(first, data);
 }
+let wearherIcon = '';
+  function checkIcon(data,i) {
+         
+    let weatherDescription = (data.list[i].weather[0].description);
+    
+    if (weatherDescription === 'clear sky') {
+        wearherIcon = './images/symbol-defs.svg#icon-clear_sky'
+    } else if(weatherDescription === 'scattered clouds') {
+        wearherIcon = './images/symbol-defs.svg#icon-scattered_clouds'
+    } else if (weatherDescription === 'broken clouds') {
+        wearherIcon = './images/symbol-defs.svg#icon-broken_clouds'
+    } else if (weatherDescription === 'shower rain') {
+        wearherIcon = './images/symbol-defs.svg#icon-shower_rain'
+    } else if (weatherDescription === 'rain') {
+        wearherIcon = './images/symbol-defs.svg#icon-rain'
+    } else if (weatherDescription === 'thunderstorm') {
+        wearherIcon = './images/symbol-defs.svg#icon-thunderstorm'
+    } else if (weatherDescription === 'snow') {
+        wearherIcon = './images/symbol-defs.svg#icon-snow'
+    } else if (weatherDescription === 'mist') {
+        wearherIcon = './images/symbol-defs.svg#icon-mist'
+    } else {
+        wearherIcon = './images/symbol-defs.svg#icon-clear_sky'
+        }
+        return wearherIcon
+    }
 
 let daysArr = [];
+let number =0
+
 
 function dataProcessing(first, data) {
-
+  daysArr = [];
+  // console.log(data);
+  
 
   let firstDayArr = [];
 
@@ -57,10 +89,12 @@ function dataProcessing(first, data) {
   }
   let minFirstDay = Math.round(Math.min(...firstDayArr));
   let maxFirstDay = Math.round(Math.max(...firstDayArr));
+  number +=1
+  checkIcon(data, 0);
+  getDates(0, minFirstDay, maxFirstDay, number, wearherIcon)
+  
 
-  getDates(0, minFirstDay, maxFirstDay)
   let second = first + 8;
-
   let secondtDayArr = [];
   for (let i = first; i < second; i += 1) {
     secondtDayArr.push(data.list[i].main.temp_min)
@@ -68,21 +102,23 @@ function dataProcessing(first, data) {
   }
   let minSecondtDay = Math.round(Math.min(...secondtDayArr));
   let maxSecondtDay = Math.round(Math.max(...secondtDayArr));
-
-  getDates(first, minSecondtDay, maxSecondtDay)
+  number +=1
+  checkIcon(data, second-4)
+  getDates(first, minSecondtDay, maxSecondtDay,number,wearherIcon)
   first = second + 8;
-
+  
   let thirdDayArr = [];
   for (let i = second; i < first; i += 1) {
     thirdDayArr.push(data.list[i].main.temp_min)
     thirdDayArr.push(data.list[i].main.temp_max)
-
   }
   let minThirdDay = Math.round(Math.min(...thirdDayArr));
   let maxThirdDay = Math.round(Math.max(...thirdDayArr));
-  getDates(second, minThirdDay, maxThirdDay)
+  number +=1
+  checkIcon(data, first-4)
+  getDates(second, minThirdDay, maxThirdDay,number,wearherIcon)
   second = first + 8;
-
+  
   let fourthDayArr = [];
   for (let i = first; i < second; i += 1) {
     fourthDayArr.push(data.list[i].main.temp_min)
@@ -90,9 +126,11 @@ function dataProcessing(first, data) {
   }
   let minFourthDay = Math.round(Math.min(...fourthDayArr));
   let maxFourthDay = Math.round(Math.max(...fourthDayArr));
-  getDates(first, minFourthDay, maxFourthDay)
+  number +=1
+  checkIcon(data, second-4)
+  getDates(first, minFourthDay, maxFourthDay,number,wearherIcon)
   first = second + 8;
-
+  
   ;
   let fifthDayArr = [];
   for (let i = second; i < first; i += 1) {
@@ -101,10 +139,12 @@ function dataProcessing(first, data) {
   }
   let minFifthDay = Math.round(Math.min(...fifthDayArr));
   let maxFifthDay = Math.round(Math.max(...fifthDayArr));
-  getDates(second, minFifthDay, maxFifthDay)
+  number +=1
+  checkIcon(data, first-4)
+  getDates(second, minFifthDay, maxFifthDay,number,wearherIcon)
 
 
-  function getDates(index, minT, maxT) {
+  function getDates(index, minT, maxT, number,wearherIcon) {
     const date = new Date(data.list[index].dt * 1000);
     const dateName = date.getDate();
 
@@ -113,27 +153,33 @@ function dataProcessing(first, data) {
 
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const monthName = months[date.getMonth()];
+    
 
-
-    createObjDay(dateName, dayName, monthName, minT, maxT);
+    createObjDay(dateName, dayName, monthName, minT, maxT,number,wearherIcon);
 
   }
 
 
-  function createObjDay(dateName, dayName, monthName, minT, maxT) {
+  function createObjDay(dateName, dayName, monthName, minT, maxT,number,wearherIcon) {
+    
+
     daysArr.push({
       date: dateName,
       day: dayName,
       month: monthName,
       min: minT,
       max: maxT,
-      link: dateName
-    });
+      link: dateName,
+      number: `day${number}`,
+      icon: wearherIcon,
+      
+      });
+      
+    
   }
-
-  console.log(daysArr)
-  ref.fiveDaysWeatherBlock.innerHTML = ''
-  renderWeather(daysArr);
+renderWeather(daysArr);
+    
+  
 }
 
 function renderWeather(daysArr) {

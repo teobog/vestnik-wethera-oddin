@@ -60,9 +60,23 @@ function dataProcessing({ name, sys: { country }, main: { temp, temp_min, temp_m
     let weatherDescription = (weather[0].description);
     let wearherIcon ='';
     if (weatherDescription === 'clear sky') {
-        wearherIcon = './images/symbol-defs.svg#icon-sun-wc'
+        wearherIcon = './images/symbol-defs.svg#icon-clear_sky'
+    } else if(weatherDescription === 'scattered clouds') {
+        wearherIcon = './images/symbol-defs.svg#icon-scattered_clouds'
+    } else if (weatherDescription === 'broken clouds') {
+        wearherIcon = './images/symbol-defs.svg#icon-broken_clouds'
+    } else if (weatherDescription === 'shower rain') {
+        wearherIcon = './images/symbol-defs.svg#icon-shower_rain'
+    } else if (weatherDescription === 'rain') {
+        wearherIcon = './images/symbol-defs.svg#icon-rain'
+    } else if (weatherDescription === 'thunderstorm') {
+        wearherIcon = './images/symbol-defs.svg#icon-thunderstorm'
+    } else if (weatherDescription === 'snow') {
+        wearherIcon = './images/symbol-defs.svg#icon-snow'
+    } else if (weatherDescription === 'mist') {
+        wearherIcon = './images/symbol-defs.svg#icon-mist'
     } else {
-        wearherIcon ='./images/symbol-defs.svg#icon-snow-wc'
+        wearherIcon = './images/symbol-defs.svg#icon-few_clouds'
     }
 
         
