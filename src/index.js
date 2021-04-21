@@ -4,7 +4,7 @@ import './js/currentCity.js'
 import './js/fiveDays.js'
 import './js/time';
 import './js/quotes.js';
-import './js/findMe.js';
+import './js/findMe.js' ;
 import './js/favCity.js'
 
 

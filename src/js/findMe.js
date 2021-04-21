@@ -21,7 +21,7 @@ locate.inputLocation.addEventListener("click", function(event){
     navigator.geolocation.getCurrentPosition(pos => {
         fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=9f82154cc61ca06904eb64ae2c103336`)
        .then(response=>response.json()
-// .then(data=>console.log(data))
+
 
        .then(data=>{
         locate.inputSearch.value = data.name
@@ -54,6 +54,5 @@ locate.inputLocation.addEventListener("click", function(event){
 //   locate.inputSearch.value= '123456';
 console.log(locate.inputSearch.value);
 
-// refs.searchForm.addEventListener('input', debounce(countrySearchInputHandler, 500));
 
 
