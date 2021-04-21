@@ -1499,12 +1499,15 @@ h1 {
     display: none;
   }
 }
-.is_active{
+.is_active {
   stroke: yellow;
   fill: yellow;
 }
-.active_geo{
+.active_geo {
   stroke: green;
   fill: greenyellow;
- }
+}
 
+.is_hidden {
+  display: none;
+}

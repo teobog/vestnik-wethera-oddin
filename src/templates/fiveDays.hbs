@@ -1,33 +1,33 @@
 {{#each this}}
-  <li class="day_one">
-    <ul class="">
-      <li class="day_of_week">
-        <p class="days_text">{{day}}</p>
-      </li>
-      <li class="date">
-        <p class="five_days_date_text">{{date}} {{month}}</p>
-      </li>
-      <li class="weather_icon_item">
-        <svg class="weather_icon">
-          <use href={{wearherIcon}}>
-          </use>
-        </svg>
-      </li>
-      <li>
-        <ul class="five_days_range_list">
-          <li class="fd_range_min">
-            <span class="temperature_range">min</span>
-            <p class="temperature_degree">{{min}}&deg; </p>
-          </li>
-          <li class="fd_range_max">
-            <span class="temperature_range">max</span>
-            <p class="temperature_degree">{{max}}&deg;</p>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <button class="more_info_button" type="button">more info</button>
-      </li>
-    </ul>
-  </li>
+<li class="day_one">
+  <ul class="">
+    <li class="day_of_week">
+      <p class="days_text">{{day}}</p>
+    </li>
+    <li class="date">
+      <p class="five_days_date_text">{{date}} {{month}}</p>
+    </li>
+    <li class="weather_icon_item">
+      <svg class="weather_icon">
+        <use href={{icon}}>
+        </use>
+      </svg>
+    </li>
+    <li>
+      <ul class="five_days_range_list">
+        <li class="fd_range_min">
+          <span class="temperature_range">min</span>
+          <p class="temperature_degree">{{min}}&deg; </p>
+        </li>
+        <li class="fd_range_max">
+          <span class="temperature_range">max</span>
+          <p class="temperature_degree">{{max}}&deg;</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <button class="more_info_button" data-action={{number}} type="button">more info</button>
+    </li>
+  </ul>
+</li>
 {{/each}}
