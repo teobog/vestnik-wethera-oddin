@@ -953,7 +953,7 @@ h1 {
     position: relative;
   }
   .input-location {
-   position: absolute;
+   position: absolute ;
     left: 20px;
     top: 12px;
   }

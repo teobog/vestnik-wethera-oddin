@@ -20,7 +20,7 @@ sun.inputSearch.addEventListener('input', (e)=>{
     sun.favIcon.classList.add("is_active")
   }else{
     sun.favIcon.classList.remove("is_active")
-  }
+   }
 });
 
 

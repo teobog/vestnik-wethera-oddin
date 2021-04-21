@@ -77,4 +77,4 @@ function dataProcessing({ name, sys: { country }, main: { temp, temp_min, temp_m
 
 function renderWeather(name, country, temp, temp_min, temp_max, wearherIcon) {
     ref.curentWeatherBlock.innerHTML = currentCityTemplate({ name, country, temp, temp_min, temp_max, wearherIcon });
-  }
+   }
