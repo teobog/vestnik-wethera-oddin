@@ -425,6 +425,7 @@ h1 {
 
 .month_time_item {
   position: relative;
+  width: 60px;
 }
 
 .month_time_item::after {
@@ -432,7 +433,7 @@ h1 {
   border: 1px solid white;
   position: absolute;
   top: 0px;
-  left: 75px;
+  left: 73px;
   height: 20px;
   opacity: 0.4;
 }
@@ -580,7 +581,24 @@ h1 {
 
 .five_days_list {
   display: flex;
-  justify-content: space-evenly;
+  overflow-x: auto;
+}
+
+
+.five_days_list::-webkit-scrollbar {
+  height: 1px; /* высота для горизонтального скролла */
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.five_days_list::-webkit-scrollbar-thumb {
+  border: 2px solid #FF6B09;
+}
+
+.day_one {
+  padding-left: 10px;
+  padding-right: 10px;
+  scroll-snap-align: start;
+  margin-bottom: 15px;
 }
 
 .day_of_week {
@@ -632,7 +650,7 @@ h1 {
 
 .fd_range_min::after {
   content: '';
-  border: 1px solid white;
+  border-right: 1px solid white;
   position: absolute;
   top: 6px;
   left: 33px;
@@ -824,8 +842,21 @@ h1 {
 
 .full_info_list {
   display: flex;
-  justify-content: space-evenly;
   margin-top: 20px;
+  overflow-x: auto;
+}
+
+.full_info_list::-webkit-scrollbar {
+  height: 1px; /* высота для горизонтального скролла */
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.full_info_list::-webkit-scrollbar-thumb {
+  border: 2px solid #FF6B09;
+}
+
+.full_info_card:not(:last-child) {
+  margin-right: 10px;
 }
 
 .full_info_card {
@@ -835,6 +866,8 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-sizing: border-box;
   border-radius: 25px;
+  scroll-snap-align: start;
+  margin-bottom: 20px;
 }
 
 .fi_time_item {
@@ -1152,6 +1185,10 @@ h1 {
     line-height: 22px;
   }
 
+  .month_time_item {
+    width: 83px;
+  }
+
   .month_time_item::after {
     left: 104px;
   }
@@ -1211,6 +1248,10 @@ h1 {
 
   .five_days_block {
     padding: 40px 20px;
+  }
+
+  .five_days_list {
+    overflow-x: hidden;
   }
 
   .days_text {
@@ -1427,7 +1468,7 @@ h1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: baseline;
+    align-items: normal;
   }
 
   .date_list_item:not(li:first-of-type) {
@@ -1471,6 +1512,10 @@ h1 {
     left: 104px;
   }
 
+  .month_time_item {
+    width: 75px;
+  }
+
   .month_time_list li:first-of-type {
     margin-right: 40px;
   }
@@ -1490,7 +1535,9 @@ h1 {
   .quotes {
     position: absolute;
     right: 10%;
-    bottom: 5%;
+    /* bottom: 5%;    K MENTORY */
+
+    top: 84%;
   }
 
   .quote_text {
@@ -1528,7 +1575,15 @@ h1 {
   }
 
   .five_days_block {
-    padding: 40px 20px;
+    padding: 40px 110px;
+  }
+
+  .day_one {
+    margin-bottom: 0;
+  }
+
+  .day_one:not(:last-child) {
+    margin-right: 60px;
   }
 
   .days_text {
