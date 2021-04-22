@@ -8,4 +8,5 @@ import './js/moreInfo.js'
 import './js/backgroundImg.js';
 import './js/findMe.js' ;
 import './js/favCity.js';
+import './js/main.js';
 

@@ -6,6 +6,10 @@ export default {fetchfiveDays};
 const ref = {
   fiveDaysWeatherBlock: document.querySelector('.five_days_list'),
   fiveDaysTitle: document.querySelector('.h2_container'),
+  fiveDaysTitle2: document.querySelector('#h2_container'),
+
+  fiveDaysTitleTablet: document.querySelector('.five_days_tablet'),
+  
   moreInfoBtn: document.querySelector('.more_info_button'),
   };
 // console.log(btn1);
@@ -20,13 +24,16 @@ function fetchfiveDays(serchQuery) {
 function checkQuery(data) {
   // console.log(data);
 
-  if (data.cod === '404') {
-    ref.fiveDaysWeatherBlock.innerHTML = '';
-  }
+  // if (data.cod === '404') {
+  //   ref.fiveDaysWeatherBlock.innerHTML = '';
+  // }
   let name = data.city.name;
   let country = data.city.country;
+  ref.fiveDaysTitle2.innerHTML = `<h2 class="five_days_city_title">${name}, <span class="five_days_country_title">${country}</span></h2>`  
   ref.fiveDaysTitle.innerHTML = `<h2 class="five_days_city_title">${name}, <span class="five_days_country_title">${country}</span></h2>`
+  ref.fiveDaysTitleTablet.innerHTML = `<h2 class="five_days_tablet">${name}, <span class="five_days_country_title">${country}</span></h2>`
 
+      
   let date1 = 0;
   let arr = [];
   let dateNow = new Date;
@@ -73,14 +80,14 @@ let wearherIcon = '';
     }
 
 let daysArr = [];
-let number =0
+
 
 
 function dataProcessing(first, data) {
   daysArr = [];
   // console.log(data);
   
-
+  let number = 0;
   let firstDayArr = [];
 
   for (let i = 0; i < first; i += 1) {

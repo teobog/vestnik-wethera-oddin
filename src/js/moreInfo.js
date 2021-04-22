@@ -82,7 +82,7 @@ let wearherIcon ='';
     let presureArrDay5 = [];
     let windArrDay5 = [];
 
-    let number = 0;
+    
 
 
 
@@ -112,7 +112,7 @@ let wearherIcon ='';
         return wearherIcon
     }
 
-
+    let number = 0;
     number += 1;
     for (let i = 0; i < first; i += 1) {
         checkIcon(data, i)
@@ -128,6 +128,7 @@ let wearherIcon ='';
             number: `day${number}`
 
         });
+        console.log(firstDayArr[0].number);
         humidityArrDay1.push(data.list[i].main.humidity,);
         tempArrDay1.push(Math.round(data.list[i].main.feels_like));
         presureArrDay1.push(data.list[i].main.pressure);
@@ -241,7 +242,7 @@ function renderMoreInfo(firstDayArr, secondDayArr, thirdDayArr, fourthDayArr, fi
     ref.moreInfoBlock.insertAdjacentHTML('beforeend',moreInfoTemplateFour(fourthDayArr));
     ref.moreInfoBlock.insertAdjacentHTML('beforeend',moreInfoTemplateTwo(secondDayArr));
     ref.moreInfoBlock.insertAdjacentHTML('beforeend', moreInfoTemplateFive(fifthDayArr));
-    // console.log(firstDayArr, secondDayArr, thirdDayArr, fourthDayArr, fifthDayArr);
+    console.log(firstDayArr, secondDayArr, thirdDayArr, fourthDayArr, fifthDayArr);
 
 
 
@@ -280,19 +281,33 @@ function onClick(e) {
         
     if (e.target === btn1Ref) {
         moreInfo1.forEach(e => e.classList.toggle("is_hidden"))
+        moreInfo2.forEach(e => e.classList.toggle("is_hidden",true))
+        moreInfo3.forEach(e => e.classList.toggle("is_hidden",true))
+        moreInfo4.forEach(e => e.classList.toggle("is_hidden",true))
+        moreInfo5.forEach(e => e.classList.toggle("is_hidden",true))
+
+
         // console.log(e.target);
         // console.log(btn1Ref);
         // console.log(moreInfo1);
         
 
     } else if (e.target === btn2Ref) {
-        moreInfo2.forEach(e=>e.classList.toggle("is_hidden"))
+        moreInfo2.forEach(e => e.classList.toggle("is_hidden"))
+        moreInfo1.forEach(e => e.classList.toggle("is_hidden",true))
+        moreInfo3.forEach(e => e.classList.toggle("is_hidden",true))
+        moreInfo4.forEach(e => e.classList.toggle("is_hidden",true))
+        moreInfo5.forEach(e => e.classList.toggle("is_hidden",true))
         // console.log(e.target);
         // console.log(btn2Ref);
         // console.log(moreInfo2);
 
     } else if (e.target === btn3Ref) {
         moreInfo3.forEach(e => e.classList.toggle("is_hidden"))
+        moreInfo2.forEach(e => e.classList.toggle("is_hidden",true))
+        moreInfo1.forEach(e => e.classList.toggle("is_hidden",true))
+        moreInfo4.forEach(e => e.classList.toggle("is_hidden",true))
+        moreInfo5.forEach(e => e.classList.toggle("is_hidden",true))
         // console.log(e.target);
         // console.log(btn3Ref);
         // console.log(moreInfo3);
@@ -300,12 +315,20 @@ function onClick(e) {
 
     } else if (e.target === btn4Ref) {
         moreInfo4.forEach(e => e.classList.toggle("is_hidden"))
+        moreInfo2.forEach(e => e.classList.toggle("is_hidden",true))
+        moreInfo3.forEach(e => e.classList.toggle("is_hidden",true))
+        moreInfo1.forEach(e => e.classList.toggle("is_hidden",true))
+        moreInfo5.forEach(e => e.classList.toggle("is_hidden",true))
         // console.log(e.target);
         // console.log(btn4Ref);
         // console.log(moreInfo4);
 
     } else if (e.target === btn5Ref) {
-        moreInfo5.forEach(e=>e.classList.toggle("is_hidden"))
+        moreInfo5.forEach(e => e.classList.toggle("is_hidden"))
+        moreInfo2.forEach(e => e.classList.toggle("is_hidden",true))
+        moreInfo3.forEach(e => e.classList.toggle("is_hidden",true))
+        moreInfo4.forEach(e => e.classList.toggle("is_hidden",true))
+        moreInfo1.forEach(e => e.classList.toggle("is_hidden",true))
         // console.log(e.target);
         // console.log(btn5Ref);
         // console.log(moreInfo5);

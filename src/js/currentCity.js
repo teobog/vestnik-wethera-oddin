@@ -2,6 +2,9 @@ import currentCityTemplate from '../templates/currentCity.hbs';
 import debounce from 'lodash.debounce';
 import fiveDays from './fiveDays';
 import moreInfo from './moreInfo';
+import main from './main';
+
+
 
 
 
@@ -10,6 +13,9 @@ import moreInfo from './moreInfo';
     serchQuery: document.querySelector('.input_nav'),
      curentWeatherBlock: document.querySelector('.current_city_list'),
      fiveDaysWeatherBlock: document.querySelector('.five_days_list'),
+    mainBox: document.querySelector('#main_container'),
+
+
     
 };
 ref.serchQuery.addEventListener('input', debounce(cityRequest,800));
@@ -41,13 +47,12 @@ export default {fetchCityWeather, ref}
 
 function checkQuery(data) {
     // console.log(data);
-    if (data.cod === '404') {
-        ref.curentWeatherBlock.innerHTML = '';
-
-
-    }
-    dataProcessing(data)
-   
+    // if (data.cod === '404') {
+    //     ref.mainBox.innerHTML = '';
+    // }
+    
+    dataProcessing(data);
+    main.checkVisible();
 
 }
 
