@@ -225,6 +225,7 @@ let wearherIcon ='';
     console.log(humidityArrDay3,tempArrDay3,presureArrDay3,windArrDay3);
     console.log(humidityArrDay4,tempArrDay4,presureArrDay4,windArrDay4);
     console.log(humidityArrDay5,tempArrDay5,presureArrDay5,windArrDay5);
+// ---------------------------Массивы для чарта----------------------------------------------
 
     renderMoreInfo(firstDayArr, secondDayArr, thirdDayArr, fourthDayArr, fifthDayArr);
 
