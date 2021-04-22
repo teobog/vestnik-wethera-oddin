@@ -3,6 +3,7 @@ import debounce from 'lodash.debounce';
 import fiveDays from './fiveDays';
 import moreInfo from './moreInfo';
 import main from './main';
+import swal from 'sweetalert';
 
 
 
@@ -18,7 +19,7 @@ import main from './main';
 
     
 };
-ref.serchQuery.addEventListener('input', debounce(cityRequest,800));
+ref.serchQuery.addEventListener('input', debounce(cityRequest,1000));
 
 
 function cityRequest(e) {
@@ -47,11 +48,14 @@ function fetchCityWeather(serchQuery) {
 
 
 function checkQuery(data) {
-    // console.log(data);
-    // if (data.cod === '404') {
-    //     ref.mainBox.innerHTML = '';
-    // }
-    
+    if (data.cod === '404'){
+        swal("Не знаю такого города", {
+  buttons: false,
+  timer: 800,
+});
+        
+        }
+
     dataProcessing(data);
     main.checkVisible();
 
@@ -96,6 +100,9 @@ function dataProcessing({ name, sys: { country }, main: { temp, temp_min, temp_m
 
 
 function renderWeather(name, country, temp, temp_min, temp_max, wearherIcon) {
+        ref.mainBox.classList.toggle('showBox', true);
+
+    
     ref.curentWeatherBlock.innerHTML = currentCityTemplate({ name, country, temp, temp_min, temp_max, wearherIcon });
    }
    export default {fetchCityWeather, cityRequest, ref}

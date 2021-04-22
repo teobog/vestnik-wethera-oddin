@@ -21,42 +21,72 @@ ref.todayBtn.addEventListener('click', hideFive);
 
 
 function checkVisible() {
-
-console.log(ref.fiveDaysBlock.classList.contains('is_hidden'));
-
     ref.fiveDaysBlock.classList.contains('is_hidden') ? ref.mainBox.classList.toggle('is_hidden', false) : '';
     };
 
-    function showFive(e) {
-        ref.mainBox.classList.toggle('is_hidden', true);
-        ref.fiveDaysBlock.classList.toggle('is_hidden', false);
-        ref.chartBlockBtn.classList.toggle('is_hidden', false);
-        // ref.oneDayBtn.classList.toggle('is_hidden', false);
+function hideMainT() {
+    ref.mainBox.classList.toggle('is_hidden', true);
+    ref.fiveDaysBlock.classList.toggle('showBox', true);
+}
 
-        
+
+function showFive(e) {
+    ref.mainBox.classList.toggle('showBox', false);
+    ref.mainBox.classList.toggle('hideBox', true);
+    ref.fiveDaysBlock.classList.toggle('hideBox', false);   
+
+    setTimeout(hideMainT, 1000);
+    ref.chartBlockBtn.classList.toggle('hideBox', false);    
+    ref.chartBlockBtn.classList.toggle('is_hidden', false);
+    ref.fiveDaysBlock.classList.toggle('is_hidden', false);   
+    
 }
     
 function showChart() {
+    ref.chartBlock.classList.toggle('hideBox', false);
+    ref.chartBlock.classList.toggle('showBox', true);
     ref.chartBlock.classList.toggle('is_hidden', false);
     ref.chartShowBtn.classList.toggle('is_hidden', true);
     
+
+    
+}
+
+function hideChartT() {
+    ref.chartBlock.classList.toggle('is_hidden', true);
+    ref.chartShowBtn.classList.toggle('is_hidden', false);
+    ref.chartShowBtn.classList.toggle('showBox', false);
 }
 
 function hideChart() {
-        ref.mainBox.classList.toggle('is_hidden', true);
-
-        ref.chartShowBtn.classList.toggle('is_hidden', false);
-        ref.chartBlock.classList.toggle('is_hidden', true);
-    
-
-    
+    ref.chartBlock.classList.toggle('hideBox', true);
+    setTimeout(hideChartT, 1000);
 }
 
-function hideFive() {
-        ref.mainBox.classList.toggle('is_hidden', false)
-        ref.fiveDaysBlock.classList.toggle('is_hidden', true);
-    ref.chartBlockBtn.classList.toggle('is_hidden', true);
+function hideFiveT() {
     ref.chartBlock.classList.toggle('is_hidden', true);
+    // ref.fiveDaysBlock.classList.toggle('hideBox', false);
+    ref.mainBox.classList.toggle('showBox', false);
+    ref.chartBlockBtn.classList.toggle('hideBox', false);
+    ref.chartBlock.classList.toggle('hideBox', false);
+    ref.fiveDaysBlock.classList.toggle('is_hidden', true);    
+    ref.chartBlockBtn.classList.toggle('is_hidden', true);
+    ref.mainBox.classList.toggle('is_hidden', false);
+    ref.mainBox.classList.toggle('showBox', true);
+
+
+
+    }
+
+function hideFive() {
+    setTimeout(hideFiveT, 1000);
+
+    ref.fiveDaysBlock.classList.toggle('showBox', false);
+    ref.fiveDaysBlock.classList.toggle('hideBox', true);
+    ref.chartBlockBtn.classList.toggle('hideBox', true); 
+    ref.chartBlock.classList.toggle('hideBox', true);
+    ref.mainBox.classList.toggle('hideBox', false);
+
     
         
 }

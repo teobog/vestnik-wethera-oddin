@@ -113,8 +113,8 @@ a {
   top: 43px;
   fill: #7e8691;
 }
-.active_geo{
-  background-image: url("./images/symbol-defs.svg#icon-geolocation-1");
+.active_geo {
+  background-image: url('./images/symbol-defs.svg#icon-geolocation-1');
   display: block;
   position: absolute;
   width: 22px;
@@ -164,8 +164,6 @@ a {
   padding-bottom: 10px;
 }
 
-
-
 .fav_country_item {
   display: flex;
   align-items: center;
@@ -183,10 +181,7 @@ a {
 }
 
 .fav_country_item:hover {
-  
-    transform: scale(1.15);
-
- 
+  transform: scale(1.15);
 }
 
 .fav_country_item:not(:last-child) {
@@ -590,14 +585,13 @@ h1 {
   overflow-x: auto;
 }
 
-
 .five_days_list::-webkit-scrollbar {
   height: 1px; /* высота для горизонтального скролла */
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .five_days_list::-webkit-scrollbar-thumb {
-  border: 2px solid #FF6B09;
+  border: 2px solid #ff6b09;
 }
 
 .day_one {
@@ -858,7 +852,7 @@ h1 {
 }
 
 .full_info_list::-webkit-scrollbar-thumb {
-  border: 2px solid #FF6B09;
+  border: 2px solid #ff6b09;
 }
 
 .full_info_card:not(:last-child) {
@@ -992,7 +986,7 @@ h1 {
     position: relative;
   }
   .input-location {
-   position: absolute;
+    position: absolute;
     left: 20px;
     top: 12px;
   }
@@ -1000,8 +994,8 @@ h1 {
     left: 20px;
     top: 12px;
   }
-  .active_geo{
-    background-image: url("./images/symbol-defs.svg#icon-geolocation-1");
+  .active_geo {
+    background-image: url('./images/symbol-defs.svg#icon-geolocation-1');
     display: block;
     position: absolute;
     width: 22px;
@@ -1028,11 +1022,8 @@ h1 {
     padding-bottom: 10px;
   }
   .fav_country_item:hover {
-  
     transform: scale(1.15);
-
- 
-}
+  }
   .favourites_icon {
     display: block;
     right: 24px;
@@ -1070,11 +1061,8 @@ h1 {
     padding: 10px;
   }
   .fav_country_item:hover {
-  
     transform: scale(1.15);
-
- 
-}
+  }
 
   .input_nav::placeholder {
     font-size: 18px;
@@ -1085,8 +1073,8 @@ h1 {
     left: 20px;
     top: 12px;
   }
-  .active_geo{
-    background-image: url("./images/symbol-defs.svg#icon-geolocation-1");
+  .active_geo {
+    background-image: url('./images/symbol-defs.svg#icon-geolocation-1');
     display: block;
     position: absolute;
     width: 22px;
@@ -1325,9 +1313,8 @@ h1 {
     margin: 0 auto;
   }
   .fav_country_item:hover {
-  
     transform: scale(1.15);
-}
+  }
   .current_city_desktop {
     display: block;
     margin: 0 auto;
@@ -1366,8 +1353,8 @@ h1 {
     left: 20px;
     top: 12px;
   }
-  .active_geo{
-    background-image: url("./images/symbol-defs.svg#icon-geolocation-1");
+  .active_geo {
+    background-image: url('./images/symbol-defs.svg#icon-geolocation-1');
     display: block;
     position: absolute;
     width: 22px;
@@ -1663,14 +1650,11 @@ h1 {
   fill: yellow;
 }
 
-
 .is_close {
   display: none;
 }
 
-
-
-  .fav_country_list::-webkit-scrollbar-button:single-button:horizontal:decrement {
+.fav_country_list::-webkit-scrollbar-button:single-button:horizontal:decrement {
   border-width: 0 8px 8px 8px;
   border-color: transparent transparent #555555 transparent;
 }
@@ -1696,3 +1680,35 @@ h1 {
   display: none;
 }
 
+@keyframes appears {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes disappears {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.showBox {
+  animation-name: appears;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
+}
+
+.hideBox {
+  animation-name: disappears;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
+}
