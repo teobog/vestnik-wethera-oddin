@@ -163,12 +163,12 @@ a {
 }
 /* .fav_country_list::-webkit-scrollbar{
 
-height: 10px;             
+height: 10px;
 border: transparent;
 }
 .fav_country_list::-webkit-scrollbar-button{
   border: 2px solid  rebeccapurple;
-  
+
 } */
 
 
@@ -1007,7 +1007,7 @@ h1 {
     right: 24px;
     top: 12px;
   }
- 
+
   .fav_cities {
     position: relative;
   }
@@ -1533,6 +1533,7 @@ h1 {
   }
 
   .quotes {
+    width: 500px;
     position: absolute;
     right: 10%;
     /* bottom: 5%;    K MENTORY */
