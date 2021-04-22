@@ -16,7 +16,7 @@ ref.serchQuery.addEventListener('input', debounce(cityRequest,800));
 
 
 function cityRequest(e) {
-    let serchQuery = (e.target.value);
+    let serchQuery = (e.target.value || e.target.textContent);
     if (serchQuery != '') {
         fetchCityWeather(serchQuery);
         fiveDays.fetchfiveDays(serchQuery);
@@ -29,6 +29,7 @@ function cityRequest(e) {
 
 
 
+
 function fetchCityWeather(serchQuery) {
 
 
@@ -36,7 +37,7 @@ function fetchCityWeather(serchQuery) {
         .then(res => res.json()).then(checkQuery).catch();
         
 }
-export default {fetchCityWeather, ref}
+
 
 
 function checkQuery(data) {
@@ -92,3 +93,4 @@ function dataProcessing({ name, sys: { country }, main: { temp, temp_min, temp_m
 function renderWeather(name, country, temp, temp_min, temp_max, wearherIcon) {
     ref.curentWeatherBlock.innerHTML = currentCityTemplate({ name, country, temp, temp_min, temp_max, wearherIcon });
    }
+   export default {fetchCityWeather, cityRequest, ref}

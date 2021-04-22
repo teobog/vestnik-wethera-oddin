@@ -160,16 +160,10 @@ a {
   margin: 0 auto;
   margin-bottom: 30px;
   overflow-x: auto;
+  height: 30px;
+  padding-bottom: 10px;
 }
-/* .fav_country_list::-webkit-scrollbar{
 
-height: 10px;
-border: transparent;
-}
-.fav_country_list::-webkit-scrollbar-button{
-  border: 2px solid  rebeccapurple;
-
-} */
 
 
 .fav_country_item {
@@ -186,6 +180,13 @@ border: transparent;
   text-decoration-line: underline;
   color: #ffffff;
   margin-bottom: 10px;
+}
+
+.fav_country_item:hover {
+  
+    transform: scale(1.15);
+
+ 
 }
 
 .fav_country_item:not(:last-child) {
@@ -343,6 +344,9 @@ h1 {
   text-transform: uppercase;
   color: #000000;
 }
+.btn_today:hover {
+  transform: scale(1.15);
+}
 .btn_five_days {
   justify-content: center;
   align-items: center;
@@ -361,7 +365,9 @@ h1 {
   text-transform: uppercase;
   color: #000000;
 }
-
+.btn_five_days:hover {
+  transform: scale(1.15);
+}
 .active {
   background: #ffffff;
   color: #000000;
@@ -1018,7 +1024,15 @@ h1 {
     margin-bottom: 30px;
     overflow-x: auto;
     justify-content: center;
+    height: 30px;
+    padding-bottom: 10px;
   }
+  .fav_country_item:hover {
+  
+    transform: scale(1.15);
+
+ 
+}
   .favourites_icon {
     display: block;
     right: 24px;
@@ -1052,8 +1066,15 @@ h1 {
     margin-bottom: 30px;
     overflow-x: auto;
     justify-content: center;
+    height: 40px;
+    padding: 10px;
   }
+  .fav_country_item:hover {
+  
+    transform: scale(1.15);
 
+ 
+}
 
   .input_nav::placeholder {
     font-size: 18px;
@@ -1303,7 +1324,10 @@ h1 {
     padding-right: 0px;
     margin: 0 auto;
   }
-
+  .fav_country_item:hover {
+  
+    transform: scale(1.15);
+}
   .current_city_desktop {
     display: block;
     margin: 0 auto;
@@ -1362,6 +1386,8 @@ h1 {
     margin-bottom: 30px;
     overflow-x: auto;
     justify-content: center;
+    height: 40px;
+    padding-bottom: 10px;
   }
   .fav_cities {
     position: relative;
