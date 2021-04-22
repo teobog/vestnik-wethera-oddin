@@ -1,3 +1,6 @@
+
+import a from './currentCity.js'
+
 const sun={
   formSearch:document.querySelector('.input_form_city'),
   inputSearch: document.querySelector('.input_nav'),
@@ -12,9 +15,12 @@ sun.formSearch.addEventListener("submit", function(event){
   event.preventDefault()
 });
 let cityName = '';
+
 sun.inputSearch.addEventListener('input', (e)=>{
+  
   cityName = e.target.value;
   // console.log(localStorage.getItem('city').split(',').includes(cityName));
+
   let city = localStorage.getItem('city');
   if (city && city.split(',').includes(cityName)){
     sun.favIcon.classList.add("is_active")
@@ -22,6 +28,10 @@ sun.inputSearch.addEventListener('input', (e)=>{
     sun.favIcon.classList.remove("is_active")
   }
 });
+
+// sun.inputSearch.addEventListener('change', ()=>{
+//   cityName!=='' ? cityRequest() : '';
+// })
 
 
 
@@ -52,9 +62,28 @@ function saveFavCity() {
   } else {
     console.log('Enter the text');
   }
+  
+// if(!sun.favIcon.classList.contains('is-active') && sun.inputSearch.value === ''){
+//   return
+// }else if(sun.inputSearch.value !== '' && !sun.favIcon.classList.contains('is-active')){
+//   favoriteArr.push(cityName);
+//     localStorage.setItem('city', favoriteArr.join(','));
+//     console.log(favorite);
+//   sun.favIcon.classList.add('is-active')
+// }else if(sun.inputSearch.value !== '' && sun.favIcon.classList.contains('is-active')){
+//   console.log('uzhe est v massive')
+
+//       let filteredFavorites = favoriteArr.filter((city) => city !== cityName);
+//       sun.favIcon.classList.remove('is_active');
+//       localStorage.setItem('city', filteredFavorites.join(','));
+  
+// }
+
   const cityFav = cityName;
   markupFavorites(cityFav);
 }
+
+
 
 sun.inputFavBtn.addEventListener('click', saveFavCity)
 
@@ -68,20 +97,35 @@ cityName.length >3 ? sun.favList.insertAdjacentHTML('beforeend',`<li class="fav_
 }
 
 function closeIcon(e) {
-if (e.target.nodeName === 'svg') {
-e.target.parentElement.classList.add('is_close');
+  // const a = document.querySelector('.fav_country_item')
+if (e.target.nodeName === 'svg' ) {
+  
+  console.log(e.target.parentElement.textContent);
+  e.target.parentElement.remove()
+  let test = document.querySelectorAll('.fav_country_item')
+  let arrF=[];
+test.forEach(el=> {
+
+  arrF.push(el.textContent)
+  
+})
+
+localStorage.setItem('city', arrF)
+
+
 sun.favIcon.classList.remove("is_active")
 
 }
 
 }
 
+
 function onClickCity(e) {
 if (e.target.nodeName === 'A') {
 sun.inputSearch.value = e.target.textContent;
 sun.favIcon.classList.add("is_active")
 
-console.log(e.target.textContent);
+a.cityRequest(e)
 }
 }
 const oldCity = localStorage.getItem('city')
@@ -100,6 +144,29 @@ function onTestLocal() {
 onTestLocal()
 sun.favList.addEventListener('click', closeIcon)
 sun.favList.addEventListener('click', onClickCity)
+
+
+// sun.favIcon.addEventListener('click', ()=>{
+//   const inputValue = sun.inputSearch.value;
+//   const localValue = localStorage.getItem('city')
+//   let localArrFavorite = localValue.split(',')
+//   console.log(localArrFavorite);
+//   if(sun.favIcon.classList.contains('.is-active') && sun.inputSearch.value !== ''){
+ 
+//   //       if(localArrFavorite.includes(inputValue)){
+//   //     let test1 = document.querySelectorAll('.fav_country_item')
+//   //     let arrF=[];
+//   // test1.forEach(el=> {
+  
+//   //   arrF.push(el.textContent)
+//   //   }
+  
+//   // }
+
+//   }
+
+// })
+
 
 
 
