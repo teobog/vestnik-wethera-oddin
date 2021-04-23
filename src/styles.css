@@ -1737,6 +1737,7 @@ h1 {
   display: none;
 }
 
+
   .fav_country_list::-webkit-scrollbar {
     height: 3px; /* высота для горизонтального скролла */
     border: 3px solid rgba(255, 255, 255, 0.2);
@@ -1767,3 +1768,37 @@ border: 2px solid #535353;
 .is_hidden {
   display: none;
 }
+
+@keyframes appears {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes disappears {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.showBox {
+  animation-name: appears;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
+}
+
+.hideBox {
+  animation-name: disappears;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
+}
+
