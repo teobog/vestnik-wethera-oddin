@@ -1,4 +1,5 @@
 import quotesTemplate from '../templates/quotes.hbs';
+import debounce from 'lodash.debounce';
 
 const ref = {
     serchQuery: document.querySelector('.input_nav'),
@@ -19,7 +20,7 @@ function quotesCreator({quote:{author,body}}) {
 function filterLength(author,body) {
     const lengText = body.split(' ').length;
     console.log(lengText);
-    if (lengText > 6 && lengText < 30) {
+    if (lengText > 6 && lengText < 21) {
        quotesRender(author, body) 
     } else {
         return quotesData()
@@ -31,4 +32,4 @@ function quotesRender(author, body) {
 }
 
 
-ref.serchQuery.addEventListener('change', quotesData);
+ref.serchQuery.addEventListener('input', debounce(quotesData,800));
