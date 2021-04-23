@@ -23,16 +23,14 @@ p {
   margin: 0;
 }
 body {
-  width: 100vw;
-  height: 100vh;
+  background-image: url("../src/images/Mykola.jpg");
+  min-height: 1200px;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: cadetblue;
-  background-image: url(./images/Mykola.jpg);
   font-family: -apple-system, BlinkMacSystemFont, 'Lato' 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    overflow-x: hidden;
 }
 
 ul {
@@ -119,7 +117,7 @@ a {
   left: 40px;
   top: 43px;
   fill: #7e8691;
-  
+
 }
 .active_geo {
   background-image: url('./images/symbol-defs.svg#icon-geolocation-1');
@@ -129,7 +127,7 @@ a {
   height: 22px;
   left: 40px;
   top: 43px;
-  
+
 }
 .input_btn {
   display: block;
@@ -153,7 +151,7 @@ a {
   top: 43px;
   stroke: #7e8691;
   fill: white;
-  
+
 }
 .fav_cities {
   display: flex;
@@ -1099,11 +1097,11 @@ h1 {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  
+
   body {
     height: 100%;
   }
-  
+
   .container {
     max-width: 620px;
     padding-left: 0px;
@@ -1738,7 +1736,7 @@ h1 {
     height: 5px; /* высота для горизонтального скролла */
     border: 5px solid rgba(255, 255, 255, 0.2);
   }
-  
+
   .full_info_list::-webkit-scrollbar-thumb {
     border: 5px solid #ff6b09;
   }
@@ -1769,7 +1767,7 @@ h1 {
   .fav_country_list::-webkit-scrollbar {
     height: 3px; /* высота для горизонтального скролла */
     border: 3px solid rgba(255, 255, 255, 0.2);
-   
+
   }
 .fav_country_list::-webkit-scrollbar-button:single-button:horizontal:decrement {
   border-width: 0 8px 8px 8px;
