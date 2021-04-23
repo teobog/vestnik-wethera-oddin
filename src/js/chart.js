@@ -14,7 +14,7 @@ function createDatas(array1,array2,array3,array4){
   console.log(arr1,arr2,arr3,arr4)
 
   var ctx = document.getElementById('myChart');
-  var myChart = new Chart(arr1,arr2,arr3,arr4, ctx, {
+  var myChart = new Chart(ctx, {
     type: 'line',
     data: {
       labels: ['09:00', '12:00', '15:00', '16:00', '19:00', '21:00', '00:00'],
@@ -22,10 +22,10 @@ function createDatas(array1,array2,array3,array4){
         label: '— Temperature, C° ',
         data: arr4,
         backgroundColor: [
-          'rgba(255, 99, 132, 1)',
+          '#FF6B09',
         ],
         borderColor: [
-          'rgba(255, 99, 132, 1)',
+          '#FF6B09',
         ],
         borderWidth: 1
       },
@@ -33,10 +33,10 @@ function createDatas(array1,array2,array3,array4){
           label: '— Humidity, % ',
           data: arr1,
           backgroundColor: [
-            'blue',
+            '#0906EB',
           ],
           borderColor: [
-            'blue',
+            '#0906EB',
           ],
           borderWidth: 1
         },
@@ -44,10 +44,10 @@ function createDatas(array1,array2,array3,array4){
           label: '— Wind Speed, m/s ',
           data: arr3,
           backgroundColor: [
-            'orange',
+            '#EA9A05',
           ],
           borderColor: [
-            'orange',
+            '#EA9A05',
           ],
           borderWidth: 1
         },
@@ -55,10 +55,10 @@ function createDatas(array1,array2,array3,array4){
           label: '— Atmosphere Pressure, m/m',
           data: arr2,
           backgroundColor: [
-            'tomato',
+            '#067806',
           ],
           borderColor: [
-            'tomato',
+            '#067806',
           ],
           borderWidth: 1
         }
@@ -71,7 +71,9 @@ function createDatas(array1,array2,array3,array4){
         }
       }
     }
-  });
+  },
+  arr1,arr2,arr3,arr4,
+  );
 }
 
 
