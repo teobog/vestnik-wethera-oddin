@@ -190,10 +190,6 @@ a {
   text-transform:capitalize ;
 }
 
-.fav_country_item:hover {
-  transform: scale(1.15);
-}
-
 .fav_country_item:not(:last-child) {
   margin-right: 10px;
 }
@@ -1081,9 +1077,7 @@ h1 {
     padding: 10px;
     align-content: center;
   }
-  .fav_country_item:hover {
-    transform: scale(1.15);
-  }
+
   .favourites_icon {
     display: block;
     right: 24px;
@@ -1126,9 +1120,7 @@ h1 {
     padding: 10px;
     align-content: center;
   }
-  .fav_country_item:hover {
-    transform: scale(1.15);
-  }
+
 
   .input_nav::placeholder {
     font-size: 18px;
@@ -1398,9 +1390,7 @@ h1 {
     margin: 0 auto;
     margin-top: 15px;
   }
-  .fav_country_item:hover {
-    transform: scale(1.15);
-  }
+
   .current_city_desktop {
     display: block;
     margin: 0 auto;
