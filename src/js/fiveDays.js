@@ -7,6 +7,8 @@ const ref = {
   fiveDaysWeatherBlock: document.querySelector('.five_days_list'),
   fiveDaysTitle: document.querySelector('.h2_container'),
   fiveDaysTitle2: document.querySelector('#h2_container'),
+  fiveDaysTitleT: document.querySelector('#h2_containerT'),
+
 
   fiveDaysTitleTablet: document.querySelector('.five_days_tablet'),
   
@@ -32,6 +34,8 @@ function checkQuery(data) {
   ref.fiveDaysTitle2.innerHTML = `<h2 class="five_days_city_title">${name}, <span class="five_days_country_title">${country}</span></h2>`  
   ref.fiveDaysTitle.innerHTML = `<h2 class="five_days_city_title">${name}, <span class="five_days_country_title">${country}</span></h2>`
   ref.fiveDaysTitleTablet.innerHTML = `<h2 class="five_days_tablet">${name}, <span class="five_days_country_title">${country}</span></h2>`
+  ref.fiveDaysTitleT.innerHTML = `<h2 class="five_days_tablet">${name}, <span class="five_days_country_title">${country}</span></h2>`
+
 
       
   let date1 = 0;

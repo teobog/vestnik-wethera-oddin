@@ -10,6 +10,10 @@ let ref = {
     chartShowBtn: document.querySelector('.btn_chart_block'),
     chartHideBtn: document.querySelector('.btn_hide_chart_block'),
     chartBlock: document.querySelector('.chart_block'),
+    fiveDaysTitleT: document.querySelector('#h2_containerT'),
+    fiveDaysTitleTab:document.querySelector('#five_days_tablet'),
+
+
 
     
 };
@@ -27,18 +31,26 @@ function checkVisible() {
 function hideMainT() {
     ref.mainBox.classList.toggle('is_hidden', true);
     ref.fiveDaysBlock.classList.toggle('showBox', true);
+
 }
 
 
 function showFive(e) {
+    ref.fiveDaysBlock.classList.toggle('hideBox', false);
+    ref.fiveDaysBlock.classList.toggle('is_hidden', false);
+    ref.fiveDaysBlock.classList.toggle('showBox', false);
+
+
     ref.mainBox.classList.toggle('showBox', false);
     ref.mainBox.classList.toggle('hideBox', true);
-    ref.fiveDaysBlock.classList.toggle('hideBox', false);   
-
     setTimeout(hideMainT, 1000);
+
     ref.chartBlockBtn.classList.toggle('hideBox', false);    
     ref.chartBlockBtn.classList.toggle('is_hidden', false);
-    ref.fiveDaysBlock.classList.toggle('is_hidden', false);   
+    // ref.fiveDaysTitleT.classList.toggle('showBox', true);
+    ref.fiveDaysTitleT.classList.toggle('is_hidden', false);
+
+    
     
 }
     
@@ -69,7 +81,9 @@ function hideFiveT() {
     ref.mainBox.classList.toggle('showBox', false);
     ref.chartBlockBtn.classList.toggle('hideBox', false);
     ref.chartBlock.classList.toggle('hideBox', false);
-    ref.fiveDaysBlock.classList.toggle('is_hidden', true);    
+    ref.fiveDaysBlock.classList.toggle('is_hidden', true);
+    ref.fiveDaysBlock.classList.toggle('showBox', false);    
+    
     ref.chartBlockBtn.classList.toggle('is_hidden', true);
     ref.mainBox.classList.toggle('is_hidden', false);
     ref.mainBox.classList.toggle('showBox', true);
