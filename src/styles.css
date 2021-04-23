@@ -23,7 +23,7 @@ p {
   margin: 0;
 }
 body {
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   background-color: cadetblue;
   font-family: -apple-system, BlinkMacSystemFont, 'Lato' 'Segoe UI', Roboto,
@@ -117,8 +117,8 @@ a {
   fill: #7e8691;
   
 }
-.active_geo{
-  background-image: url("./images/symbol-defs.svg#icon-geolocation-1");
+.active_geo {
+  background-image: url('./images/symbol-defs.svg#icon-geolocation-1');
   display: block;
   position: absolute;
   width: 22px;
@@ -172,8 +172,6 @@ a {
   cursor: pointer
 }
 
-
-
 .fav_country_item {
   display: flex;
   align-items: center;
@@ -192,10 +190,7 @@ a {
 }
 
 .fav_country_item:hover {
-  
-    transform: scale(1.15);
-
- 
+  transform: scale(1.15);
 }
 
 .fav_country_item:not(:last-child) {
@@ -599,8 +594,8 @@ h1 {
 .five_days_list {
   display: flex;
   overflow-x: auto;
+  justify-content: space-around;
 }
-
 
 .five_days_list::-webkit-scrollbar {
   height: 1px; /* высота для горизонтального скролла */
@@ -608,7 +603,7 @@ h1 {
 }
 
 .five_days_list::-webkit-scrollbar-thumb {
-  border: 2px solid #FF6B09;
+  border: 2px solid #ff6b09;
 }
 
 .day_one {
@@ -869,6 +864,7 @@ h1 {
   display: flex;
   margin-top: 20px;
   overflow-x: auto;
+  justify-content: space-evenly;
 }
 
 .full_info_list::-webkit-scrollbar {
@@ -877,7 +873,7 @@ h1 {
 }
 
 .full_info_list::-webkit-scrollbar-thumb {
-  border: 2px solid #FF6B09;
+  border: 2px solid #ff6b09;
 }
 
 .full_info_card:not(:last-child) {
@@ -980,7 +976,18 @@ h1 {
   color: #ffffff;
   opacity: 0.54;
 }
-
+.five_days_block {
+  margin: 0 auto;
+  max-width: 240px;
+  padding: 20px;
+}
+.chart_block {
+  margin: 0 auto;
+  max-width: 260px;
+  padding: 10px;
+  margin-top: 30px;
+  margin-top: 24px;
+}
 /* ----------------------------------------------CHART BLOCK-------------------------- */
 
 .chart_block {
@@ -997,7 +1004,18 @@ h1 {
   width: 500px;
   height: 500px;
 }
-
+.five_days_block {
+  margin: 0 20px;
+  max-width: 410px;
+  padding: 20px;
+}
+.chart_block {
+  margin: 0 20px;
+  max-width: 410px;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
 /* --------------------------------------------MEDIA---------------------------------- */
 
 @media screen and (min-width: 468px) and (max-width: 767px) {
@@ -1007,11 +1025,23 @@ h1 {
     padding-right: 0px;
     margin: 0 auto;
   }
+  .five_days_block {
+    margin: 0 auto;
+    max-width: 410px;
+    padding: 20px;
+  }
+  .chart_block {
+    margin: 0 auto;
+    max-width: 410px;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+  }
   .input_form_city {
     position: relative;
   }
   .input-location {
-   position: absolute;
+    position: absolute;
     left: 20px;
     top: 12px;
   }
@@ -1019,8 +1049,8 @@ h1 {
     left: 20px;
     top: 12px;
   }
-  .active_geo{
-    background-image: url("./images/symbol-defs.svg#icon-geolocation-1");
+  .active_geo {
+    background-image: url('./images/symbol-defs.svg#icon-geolocation-1');
     display: block;
     position: absolute;
     width: 22px;
@@ -1048,11 +1078,8 @@ h1 {
     align-content: center;
   }
   .fav_country_item:hover {
-  
     transform: scale(1.15);
-
- 
-}
+  }
   .favourites_icon {
     display: block;
     right: 24px;
@@ -1091,11 +1118,8 @@ h1 {
     align-content: center;
   }
   .fav_country_item:hover {
-  
     transform: scale(1.15);
-
- 
-}
+  }
 
   .input_nav::placeholder {
     font-size: 18px;
@@ -1106,8 +1130,8 @@ h1 {
     left: 20px;
     top: 12px;
   }
-  .active_geo{
-    background-image: url("./images/symbol-defs.svg#icon-geolocation-1");
+  .active_geo {
+    background-image: url('./images/symbol-defs.svg#icon-geolocation-1');
     display: block;
     position: absolute;
     width: 22px;
@@ -1290,6 +1314,9 @@ h1 {
 
   .five_days_block {
     padding: 40px 20px;
+    max-width: 580px;
+
+    margin: 0 auto;
   }
 
   .five_days_list {
@@ -1332,6 +1359,13 @@ h1 {
     left: 47px;
   }
 
+  .chart_block {
+    max-width: 580px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 100px;
+  }
+
   .five_days_slider {
     display: none;
   }
@@ -1345,10 +1379,14 @@ h1 {
     padding-right: 0px;
     margin: 0 auto;
   }
+  .five_days_lis .chart_block {
+    max-width: 1060px;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
   .fav_country_item:hover {
-  
     transform: scale(1.15);
-}
+  }
   .current_city_desktop {
     display: block;
     margin: 0 auto;
@@ -1387,8 +1425,8 @@ h1 {
     left: 20px;
     top: 12px;
   }
-  .active_geo{
-    background-image: url("./images/symbol-defs.svg#icon-geolocation-1");
+  .active_geo {
+    background-image: url('./images/symbol-defs.svg#icon-geolocation-1');
     display: block;
     position: absolute;
     width: 22px;
@@ -1625,6 +1663,16 @@ h1 {
 
   .five_days_block {
     padding: 40px 110px;
+    max-width: 840px;
+    margin: 0 auto;
+  }
+
+  .chart_block {
+    padding: 40px 110px;
+    max-width: 840px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 100px;
   }
 
   .day_one {
@@ -1685,18 +1733,28 @@ h1 {
   fill: rgb(2, 110, 252);
 }
 
-
 .is_close {
   display: none;
 }
-
-
 
   .fav_country_list::-webkit-scrollbar {
     height: 3px; /* высота для горизонтального скролла */
     border: 3px solid rgba(255, 255, 255, 0.2);
    
   }
+.fav_country_list::-webkit-scrollbar-button:single-button:horizontal:decrement {
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #555555 transparent;
+}
+
+.fav_country_list::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+  border-color: transparent transparent #777777 transparent;
+}
+
+.fav_country_list::-webkit-scrollbar-button:single-button:horizontal:increment {
+  border-width: 8px 8px 0 8px;
+  border-color: #555555 transparent transparent transparent;
+}
 
 .fav_country_list::-webkit-scrollbar-thumb {
 border: 2px solid #535353;
@@ -1709,5 +1767,3 @@ border: 2px solid #535353;
 .is_hidden {
   display: none;
 }
-
-

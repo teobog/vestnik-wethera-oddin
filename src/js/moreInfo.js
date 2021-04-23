@@ -11,7 +11,7 @@ const ref = {
     moreInfoBlock: document.querySelector('.full_info_list'),
 
 };
-    
+
 
 ref.fiveDaysWeatherBlock.addEventListener('click', onClick);
 
@@ -56,12 +56,12 @@ function dataProcessing(first, data) {
 let wearherIcon ='';
 
     let firstDayArr = [];
-    
+
     let humidityArrDay1 = [];
     let tempArrDay1 = [];
     let presureArrDay1 = [];
     let windArrDay1 = [];
-    
+
     let humidityArrDay2 = [];
     let tempArrDay2 = [];
     let presureArrDay2 = [];
@@ -82,14 +82,14 @@ let wearherIcon ='';
     let presureArrDay5 = [];
     let windArrDay5 = [];
 
-    
+
 
 
 
     function checkIcon(data,i) {
-         
+
     let weatherDescription = (data.list[i].weather[0].description);
-    
+
     if (weatherDescription === 'clear sky') {
         wearherIcon = './images/symbol-defs.svg#icon-clear_sky'
     } else if(weatherDescription === 'scattered clouds') {
@@ -135,7 +135,7 @@ let wearherIcon ='';
         windArrDay1.push(+(data.list[i].wind.speed).toFixed(1));
 
     }
-    
+
 
     let second = first + 8;
     number += 1;
@@ -220,11 +220,12 @@ let wearherIcon ='';
 
 
 // ---------------------------Массивы для чарта----------------------------------------------
-    // console.log(humidityArrDay1, tempArrDay1, presureArrDay1, windArrDay1);
-    // console.log(humidityArrDay2,tempArrDay2,presureArrDay2,windArrDay2);
-    // console.log(humidityArrDay3,tempArrDay3,presureArrDay3,windArrDay3);
-    // console.log(humidityArrDay4,tempArrDay4,presureArrDay4,windArrDay4);
-    // console.log(humidityArrDay5,tempArrDay5,presureArrDay5,windArrDay5);
+    console.log(humidityArrDay1, tempArrDay1, presureArrDay1, windArrDay1);
+    console.log(humidityArrDay2,tempArrDay2,presureArrDay2,windArrDay2);
+    console.log(humidityArrDay3,tempArrDay3,presureArrDay3,windArrDay3);
+    console.log(humidityArrDay4,tempArrDay4,presureArrDay4,windArrDay4);
+    console.log(humidityArrDay5,tempArrDay5,presureArrDay5,windArrDay5);
+// ---------------------------Массивы для чарта----------------------------------------------
 
     renderMoreInfo(firstDayArr, secondDayArr, thirdDayArr, fourthDayArr, fifthDayArr);
 
@@ -247,10 +248,10 @@ function renderMoreInfo(firstDayArr, secondDayArr, thirdDayArr, fourthDayArr, fi
 
 
   }
-    
 
-    
-   
+
+
+
 
 
 function onClick(e) {
@@ -260,14 +261,14 @@ function onClick(e) {
     let moreInfo3 = document.querySelectorAll('#day3');
     let moreInfo4 = document.querySelectorAll('#day4');
     let moreInfo5 = document.querySelectorAll('#day5');
-    
+
     let btn1Ref = document.querySelector('[data-action=day1]');
     let btn2Ref = document.querySelector('[data-action=day2]');
     let btn3Ref = document.querySelector('[data-action=day3]');
     let btn4Ref = document.querySelector('[data-action=day4]');
     let btn5Ref = document.querySelector('[data-action=day5]');
 
-   
+
     // console.log(moreInfo1);
     // console.log(moreInfo2);
     // console.log(moreInfo3);
@@ -276,9 +277,9 @@ function onClick(e) {
 
 
 
-    
-    
-        
+
+
+
     if (e.target === btn1Ref) {
         moreInfo1.forEach(e => e.classList.toggle("is_hidden"))
         moreInfo2.forEach(e => e.classList.toggle("is_hidden",true))
@@ -290,7 +291,7 @@ function onClick(e) {
         // console.log(e.target);
         // console.log(btn1Ref);
         // console.log(moreInfo1);
-        
+
 
     } else if (e.target === btn2Ref) {
         moreInfo2.forEach(e => e.classList.toggle("is_hidden"))
@@ -311,7 +312,7 @@ function onClick(e) {
         // console.log(e.target);
         // console.log(btn3Ref);
         // console.log(moreInfo3);
-        
+
 
     } else if (e.target === btn4Ref) {
         moreInfo4.forEach(e => e.classList.toggle("is_hidden"))

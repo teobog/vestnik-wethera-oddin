@@ -1,4 +1,5 @@
-import dataTemplates from '../templates/data.hbs'
+import dataTemplates from '../templates/data.hbs';
+import debounce from 'lodash.debounce';
 const refs = {
  input : document.querySelector('.input_nav'),
  listTime : document.querySelector('.date_list'),
@@ -73,4 +74,4 @@ function renderSun(sunrise,newSunrise,sunset,newSunset) {
   refs.listTime.insertAdjacentHTML('beforeend', dataTemplates({ sunrise,newSunrise, sunset,newSunset }))
 }
 
-refs.input.addEventListener('change', onTime);
+refs.input.addEventListener('input', debounce(onTime,800));
