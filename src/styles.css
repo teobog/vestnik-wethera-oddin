@@ -23,19 +23,21 @@ p {
   margin: 0;
 }
 body {
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   background-color: cadetblue;
   font-family: -apple-system, BlinkMacSystemFont, 'Lato' 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
+
 ul {
   list-style: none;
 }
 a {
   text-decoration: none;
   color: inherit;
+
 }
 .container {
   margin: 0 20px;
@@ -103,6 +105,7 @@ a {
   color: transparent;
   background-color: transparent;
   z-index: 3;
+  cursor: pointer
 }
 .location_icon {
   display: block;
@@ -112,6 +115,7 @@ a {
   left: 40px;
   top: 43px;
   fill: #7e8691;
+  
 }
 .active_geo {
   background-image: url('./images/symbol-defs.svg#icon-geolocation-1');
@@ -121,6 +125,7 @@ a {
   height: 22px;
   left: 40px;
   top: 43px;
+  
 }
 .input_btn {
   display: block;
@@ -133,6 +138,7 @@ a {
   color: transparent;
   background-color: transparent;
   z-index: 3;
+  cursor: pointer
 }
 .favourites_icon {
   display: block;
@@ -143,6 +149,7 @@ a {
   top: 43px;
   stroke: #7e8691;
   fill: white;
+  
 }
 .fav_cities {
   display: flex;
@@ -155,13 +162,14 @@ a {
 
 .fav_country_list {
   display: flex;
-  width: 260px;
+  /* width: 260px; */
   overflow: hidden;
   margin: 0 auto;
   margin-bottom: 30px;
   overflow-x: auto;
   height: 30px;
   padding-bottom: 10px;
+  cursor: pointer
 }
 
 .fav_country_item {
@@ -175,9 +183,10 @@ a {
   font-weight: normal;
   font-size: 12px;
   line-height: 14px;
-  text-decoration-line: underline;
   color: #ffffff;
   margin-bottom: 10px;
+  text-decoration: none;
+  text-transform:capitalize ;
 }
 
 .fav_country_item:hover {
@@ -338,6 +347,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+  cursor: pointer
 }
 .btn_today:hover {
   transform: scale(1.15);
@@ -359,6 +369,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+  cursor: pointer
 }
 .btn_five_days:hover {
   transform: scale(1.15);
@@ -583,6 +594,7 @@ h1 {
 .five_days_list {
   display: flex;
   overflow-x: auto;
+  justify-content: space-around;
 }
 
 .five_days_list::-webkit-scrollbar {
@@ -690,6 +702,7 @@ h1 {
   text-decoration: underline;
   color: #ffffff;
   opacity: 0.3;
+  cursor: pointer
 }
 
 .btn_chart_block {
@@ -698,6 +711,7 @@ h1 {
   margin-bottom: 60px;
   width: 110px;
   justify-content: space-between;
+  cursor: pointer
 }
 
 .btn_show_chart {
@@ -712,6 +726,7 @@ h1 {
   border: none;
   color: #ff6b09;
   background-color: transparent;
+  cursor: pointer
 }
 
 .btn_chart_circle {
@@ -738,6 +753,7 @@ h1 {
   margin: 0 auto;
   margin-bottom: 10px;
   justify-content: space-between;
+  cursor: pointer
 }
 
 .btn_hide_chart_circle {
@@ -773,6 +789,7 @@ h1 {
   border: none;
   color: #ff6b09;
   background-color: transparent;
+  cursor: pointer
 }
 
 .five_days_slider {
@@ -781,6 +798,7 @@ h1 {
   margin-top: 15px;
   width: 58px;
   justify-content: space-between;
+  cursor: pointer
 }
 
 .btn_previous_days {
@@ -790,6 +808,7 @@ h1 {
   width: 20px;
   height: 20px;
   background-color: transparent;
+  cursor: pointer
 }
 
 .previous_day_icon {
@@ -818,6 +837,7 @@ h1 {
   width: 20px;
   height: 20px;
   background-color: transparent;
+  cursor: pointer
 }
 
 .next_day_icon {
@@ -844,6 +864,7 @@ h1 {
   display: flex;
   margin-top: 20px;
   overflow-x: auto;
+  justify-content: space-evenly;
 }
 
 .full_info_list::-webkit-scrollbar {
@@ -955,7 +976,18 @@ h1 {
   color: #ffffff;
   opacity: 0.54;
 }
-
+.five_days_block {
+  margin: 0 auto;
+  max-width: 240px;
+  padding: 20px;
+}
+.chart_block {
+  margin: 0 auto;
+  max-width: 260px;
+  padding: 10px;
+  margin-top: 30px;
+  margin-top: 24px;
+}
 /* ----------------------------------------------CHART BLOCK-------------------------- */
 
 .chart_block {
@@ -972,7 +1004,18 @@ h1 {
   width: 500px;
   height: 500px;
 }
-
+.five_days_block {
+  margin: 0 20px;
+  max-width: 410px;
+  padding: 20px;
+}
+.chart_block {
+  margin: 0 20px;
+  max-width: 410px;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
 /* --------------------------------------------MEDIA---------------------------------- */
 
 @media screen and (min-width: 468px) and (max-width: 767px) {
@@ -981,6 +1024,18 @@ h1 {
     padding-left: 0px;
     padding-right: 0px;
     margin: 0 auto;
+  }
+  .five_days_block {
+    margin: 0 auto;
+    max-width: 410px;
+    padding: 20px;
+  }
+  .chart_block {
+    margin: 0 auto;
+    max-width: 410px;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 100px;
   }
   .input_form_city {
     position: relative;
@@ -1013,13 +1068,14 @@ h1 {
   }
   .fav_country_list {
     display: flex;
-    width: 80%;
+    width: 100%;
     overflow: hidden;
     margin-bottom: 30px;
     overflow-x: auto;
     justify-content: center;
     height: 30px;
-    padding-bottom: 10px;
+    padding: 10px;
+    align-content: center;
   }
   .fav_country_item:hover {
     transform: scale(1.15);
@@ -1052,13 +1108,14 @@ h1 {
   }
   .fav_country_list {
     display: flex;
-    width: 80%;
+    width: 100%;
     overflow: hidden;
     margin-bottom: 30px;
     overflow-x: auto;
     justify-content: center;
     height: 40px;
     padding: 10px;
+    align-content: center;
   }
   .fav_country_item:hover {
     transform: scale(1.15);
@@ -1257,6 +1314,9 @@ h1 {
 
   .five_days_block {
     padding: 40px 20px;
+    max-width: 580px;
+
+    margin: 0 auto;
   }
 
   .five_days_list {
@@ -1299,6 +1359,13 @@ h1 {
     left: 47px;
   }
 
+  .chart_block {
+    max-width: 580px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 100px;
+  }
+
   .five_days_slider {
     display: none;
   }
@@ -1311,6 +1378,11 @@ h1 {
     padding-left: 0px;
     padding-right: 0px;
     margin: 0 auto;
+  }
+  .five_days_lis .chart_block {
+    max-width: 1060px;
+    margin: 0 auto;
+    margin-top: 15px;
   }
   .fav_country_item:hover {
     transform: scale(1.15);
@@ -1368,13 +1440,14 @@ h1 {
   }
   .fav_country_list {
     display: flex;
-    width: 80%;
+    width: 100%;
     overflow: hidden;
     margin-bottom: 30px;
     overflow-x: auto;
     justify-content: center;
     height: 40px;
-    padding-bottom: 10px;
+    padding: 10px;
+    align-content: center;
   }
   .fav_cities {
     position: relative;
@@ -1590,6 +1663,16 @@ h1 {
 
   .five_days_block {
     padding: 40px 110px;
+    max-width: 840px;
+    margin: 0 auto;
+  }
+
+  .chart_block {
+    padding: 40px 110px;
+    max-width: 840px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 100px;
   }
 
   .day_one {
@@ -1646,14 +1729,20 @@ h1 {
   }
 }
 .is_active {
-  stroke: yellow;
-  fill: yellow;
+  stroke: rgb(2, 110, 252);
+  fill: rgb(2, 110, 252);
 }
 
 .is_close {
   display: none;
 }
 
+
+  .fav_country_list::-webkit-scrollbar {
+    height: 3px; /* высота для горизонтального скролла */
+    border: 3px solid rgba(255, 255, 255, 0.2);
+   
+  }
 .fav_country_list::-webkit-scrollbar-button:single-button:horizontal:decrement {
   border-width: 0 8px 8px 8px;
   border-color: transparent transparent #555555 transparent;
@@ -1668,8 +1757,8 @@ h1 {
   border-color: #555555 transparent transparent transparent;
 }
 
-.fav_country_list::-webkit-scrollbar-button:horizontal:single-button:increment:hover {
-  border-color: #777777 transparent transparent transparent;
+.fav_country_list::-webkit-scrollbar-thumb {
+border: 2px solid #535353;
 }
 .active_geo {
   stroke: green;
@@ -1712,3 +1801,4 @@ h1 {
   animation-duration: 1000ms;
   animation-fill-mode: forwards;
 }
+
