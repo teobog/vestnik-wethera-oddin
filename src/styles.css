@@ -295,7 +295,7 @@ h1 {
 
 .range_item_min::after {
   content: '';
-  border: 1px solid #27384a;
+  border-right: 1px solid #27384a;
   position: absolute;
   top: 5px;
   left: 35px;
@@ -442,7 +442,7 @@ h1 {
 
 .month_time_item::after {
   content: '';
-  border: 1px solid white;
+  border-right: 1px solid white;
   position: absolute;
   top: 0px;
   left: 73px;
@@ -492,7 +492,7 @@ h1 {
 
 .sunrise_item::after {
   content: '';
-  border: 1px solid white;
+  border-right: 1px solid white;
   position: absolute;
   top: 0px;
   left: 83px;
@@ -594,16 +594,15 @@ h1 {
 .five_days_list {
   display: flex;
   overflow-x: auto;
-  justify-content: space-around;
 }
 
 .five_days_list::-webkit-scrollbar {
-  height: 1px; /* высота для горизонтального скролла */
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  height: 3px; /* высота для горизонтального скролла */
+  border: 3px solid rgba(255, 255, 255, 0.2);
 }
 
 .five_days_list::-webkit-scrollbar-thumb {
-  border: 2px solid #ff6b09;
+  border: 3px solid #ff6b09;
 }
 
 .day_one {
@@ -864,16 +863,16 @@ h1 {
   display: flex;
   margin-top: 20px;
   overflow-x: auto;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .full_info_list::-webkit-scrollbar {
-  height: 1px; /* высота для горизонтального скролла */
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  height: 3px; /* высота для горизонтального скролла */
+  border: 3px solid rgba(255, 255, 255, 0.2);
 }
 
 .full_info_list::-webkit-scrollbar-thumb {
-  border: 2px solid #ff6b09;
+  border: 3px solid #ff6b09;
 }
 
 .full_info_card:not(:last-child) {
@@ -1482,6 +1481,7 @@ h1 {
 
   .current_city {
     position: absolute;
+    top: 230px;
     right: 0;
     padding-top: 30px;
     padding-bottom: 35px;
@@ -1505,8 +1505,8 @@ h1 {
 
   .button_block {
     position: absolute;
-    right: 96px;
-    top: 600px;
+    right: 121px;
+    top: 570px;
   }
 
   .button_block_desktop {
@@ -1621,9 +1621,7 @@ h1 {
   .quotes {
     width: 500px;
     position: absolute;
-    right: 10%;
-    /* bottom: 5%;    K MENTORY */
-
+    right: 3%;
     top: 84%;
   }
 
@@ -1639,7 +1637,6 @@ h1 {
   }
 
   .quote_owner {
-    width: 340px;
     text-align: right;
   }
 
@@ -1719,6 +1716,15 @@ h1 {
     width: 100px;
   }
 
+  .full_info_list::-webkit-scrollbar {
+    height: 5px; /* высота для горизонтального скролла */
+    border: 5px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .full_info_list::-webkit-scrollbar-thumb {
+    border: 5px solid #ff6b09;
+  }
+
   .fd_range_min::after {
     height: 35px;
     left: 47px;
@@ -1726,6 +1732,10 @@ h1 {
 
   .five_days_slider {
     display: none;
+  }
+
+  .btn_chart_block {
+    margin-top: 20px;
   }
 }
 .is_active {
