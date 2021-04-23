@@ -17,7 +17,7 @@ import swal from 'sweetalert';
     mainBox: document.querySelector('#main_container'),
 
 
-    
+
 };
 ref.serchQuery.addEventListener('input', debounce(cityRequest,1000));
 
@@ -28,10 +28,10 @@ function cityRequest(e) {
         fetchCityWeather(serchQuery);
         fiveDays.fetchfiveDays(serchQuery);
         moreInfo.fetchMoreInfo(serchQuery);
-        
+
     }
-    
-    
+
+
  }
 
 
@@ -40,9 +40,9 @@ function cityRequest(e) {
 function fetchCityWeather(serchQuery) {
 
 
-    return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${serchQuery}&appid=2b30446187616e7178e0cd559ea22385&units=metric`)
+    return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${serchQuery}&appid=2b30446187616e7178e0cd559ea22385&units=metric`)
         .then(res => res.json()).then(checkQuery).catch();
-        
+
 }
 
 
@@ -53,7 +53,7 @@ function checkQuery(data) {
   buttons: false,
   timer: 800,
 });
-        
+
         }
 
     dataProcessing(data);
@@ -89,10 +89,10 @@ function dataProcessing({ name, sys: { country }, main: { temp, temp_min, temp_m
         wearherIcon = './images/symbol-defs.svg#icon-few_clouds'
     }
 
-        
+
 
         renderWeather(name,country,roundTemp,roundTemp_min,roundTemp_max, wearherIcon)
-     
+
 }
 
 
@@ -102,7 +102,7 @@ function dataProcessing({ name, sys: { country }, main: { temp, temp_min, temp_m
 function renderWeather(name, country, temp, temp_min, temp_max, wearherIcon) {
         ref.mainBox.classList.toggle('showBox', true);
 
-    
+
     ref.curentWeatherBlock.innerHTML = currentCityTemplate({ name, country, temp, temp_min, temp_max, wearherIcon });
    }
    export default {fetchCityWeather, cityRequest, ref}

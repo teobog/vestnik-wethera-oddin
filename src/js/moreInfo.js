@@ -3,6 +3,7 @@ import moreInfoTemplateTwo from '../templates/moreInfoTwo.hbs'
 import moreInfoTemplateThree from '../templates/moreInfoThree.hbs';
 import moreInfoTemplateFour from '../templates/moreInfoFour.hbs';
 import moreInfoTemplateFive from '../templates/moreInfoFive.hbs';
+import ChartCreate from '../js/chart.js'
 export default { fetchMoreInfo };
 
 
@@ -19,7 +20,7 @@ ref.fiveDaysWeatherBlock.addEventListener('click', onClick);
 
 function fetchMoreInfo(serchQuery) {
 
-     return fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${serchQuery}&appid=33417cdb9f22734d9f99a1eef2dd1402&units=metric`)
+     return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${serchQuery}&appid=33417cdb9f22734d9f99a1eef2dd1402&units=metric`)
         .then(res => res.json()).then(dataCheck).catch();
 
 }
@@ -47,7 +48,30 @@ function dataCheck(data) {
     }
     dataProcessing(first, data);
 }
+let humidityArrDay1 = [];
+let tempArrDay1 = [];
+let presureArrDay1 = [];
+let windArrDay1 = [];
 
+let humidityArrDay2 = [];
+let tempArrDay2 = [];
+let presureArrDay2 = [];
+let windArrDay2 = [];
+
+let humidityArrDay3 = [];
+let tempArrDay3 = [];
+let presureArrDay3 = [];
+let windArrDay3 = [];
+
+let humidityArrDay4 = [];
+let tempArrDay4 = [];
+let presureArrDay4 = [];
+let windArrDay4 = [];
+
+let humidityArrDay5 = [];
+let tempArrDay5 = [];
+let presureArrDay5 = [];
+let windArrDay5 = [];
 
 function dataProcessing(first, data) {
 
@@ -56,35 +80,6 @@ function dataProcessing(first, data) {
 let wearherIcon ='';
 
     let firstDayArr = [];
-
-    let humidityArrDay1 = [];
-    let tempArrDay1 = [];
-    let presureArrDay1 = [];
-    let windArrDay1 = [];
-
-    let humidityArrDay2 = [];
-    let tempArrDay2 = [];
-    let presureArrDay2 = [];
-    let windArrDay2 = [];
-
-    let humidityArrDay3 = [];
-    let tempArrDay3 = [];
-    let presureArrDay3 = [];
-    let windArrDay3 = [];
-
-    let humidityArrDay4 = [];
-    let tempArrDay4 = [];
-    let presureArrDay4 = [];
-    let windArrDay4 = [];
-
-    let humidityArrDay5 = [];
-    let tempArrDay5 = [];
-    let presureArrDay5 = [];
-    let windArrDay5 = [];
-
-
-
-
 
     function checkIcon(data,i) {
 
@@ -220,11 +215,11 @@ let wearherIcon ='';
 
 
 // ---------------------------Массивы для чарта----------------------------------------------
-    console.log(humidityArrDay1, tempArrDay1, presureArrDay1, windArrDay1);
-    console.log(humidityArrDay2,tempArrDay2,presureArrDay2,windArrDay2);
-    console.log(humidityArrDay3,tempArrDay3,presureArrDay3,windArrDay3);
-    console.log(humidityArrDay4,tempArrDay4,presureArrDay4,windArrDay4);
-    console.log(humidityArrDay5,tempArrDay5,presureArrDay5,windArrDay5);
+//     console.log(humidityArrDay1, tempArrDay1, presureArrDay1, windArrDay1);
+//     console.log(humidityArrDay2,tempArrDay2,presureArrDay2,windArrDay2);
+//     console.log(humidityArrDay3,tempArrDay3,presureArrDay3,windArrDay3);
+//     console.log(humidityArrDay4,tempArrDay4,presureArrDay4,windArrDay4);
+//     console.log(humidityArrDay5,tempArrDay5,presureArrDay5,windArrDay5);
 // ---------------------------Массивы для чарта----------------------------------------------
 
     renderMoreInfo(firstDayArr, secondDayArr, thirdDayArr, fourthDayArr, fifthDayArr);
@@ -248,9 +243,6 @@ function renderMoreInfo(firstDayArr, secondDayArr, thirdDayArr, fourthDayArr, fi
 
 
   }
-
-
-
 
 
 
@@ -279,14 +271,13 @@ function onClick(e) {
 
 
 
-
     if (e.target === btn1Ref) {
         moreInfo1.forEach(e => e.classList.toggle("is_hidden"))
         moreInfo2.forEach(e => e.classList.toggle("is_hidden",true))
         moreInfo3.forEach(e => e.classList.toggle("is_hidden",true))
         moreInfo4.forEach(e => e.classList.toggle("is_hidden",true))
         moreInfo5.forEach(e => e.classList.toggle("is_hidden",true))
-
+        ChartCreate.createDatas(humidityArrDay1, presureArrDay1, windArrDay1, tempArrDay1)
 
         // console.log(e.target);
         // console.log(btn1Ref);
@@ -299,6 +290,7 @@ function onClick(e) {
         moreInfo3.forEach(e => e.classList.toggle("is_hidden",true))
         moreInfo4.forEach(e => e.classList.toggle("is_hidden",true))
         moreInfo5.forEach(e => e.classList.toggle("is_hidden",true))
+      ChartCreate.createDatas(humidityArrDay2, presureArrDay2, windArrDay2, tempArrDay2)
         // console.log(e.target);
         // console.log(btn2Ref);
         // console.log(moreInfo2);
@@ -309,6 +301,7 @@ function onClick(e) {
         moreInfo1.forEach(e => e.classList.toggle("is_hidden",true))
         moreInfo4.forEach(e => e.classList.toggle("is_hidden",true))
         moreInfo5.forEach(e => e.classList.toggle("is_hidden",true))
+      ChartCreate.createDatas(humidityArrDay3, presureArrDay3, windArrDay3, tempArrDay3)
         // console.log(e.target);
         // console.log(btn3Ref);
         // console.log(moreInfo3);
@@ -320,6 +313,7 @@ function onClick(e) {
         moreInfo3.forEach(e => e.classList.toggle("is_hidden",true))
         moreInfo1.forEach(e => e.classList.toggle("is_hidden",true))
         moreInfo5.forEach(e => e.classList.toggle("is_hidden",true))
+      ChartCreate.createDatas(humidityArrDay4, presureArrDay4, windArrDay4, tempArrDay4)
         // console.log(e.target);
         // console.log(btn4Ref);
         // console.log(moreInfo4);
@@ -330,6 +324,8 @@ function onClick(e) {
         moreInfo3.forEach(e => e.classList.toggle("is_hidden",true))
         moreInfo4.forEach(e => e.classList.toggle("is_hidden",true))
         moreInfo1.forEach(e => e.classList.toggle("is_hidden",true))
+      ChartCreate.
+      ChartCreate.createDatas(humidityArrDay5, presureArrDay5, windArrDay5, tempArrDay5)
         // console.log(e.target);
         // console.log(btn5Ref);
         // console.log(moreInfo5);

@@ -17,7 +17,7 @@ const refs = {
 function onTime(e) {
     e.preventDefault();
     const inputValue = e.target.value
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${inputValue}&units=metric&appid=9f82154cc61ca06904eb64ae2c103336`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&units=metric&appid=9f82154cc61ca06904eb64ae2c103336`)
         .then(response => response.json())
     .then(timeSun)
 }
@@ -33,7 +33,7 @@ function timeSun({ sys: { sunrise }, sys: { sunset }, timezone }) {
   const newHours = Math.floor(newSec / 60 / 60);
   const newMinutes = Math.floor(newSec / 60) - (newHours * 60);
   const newSeconds = newSec % 60;
-  
+
   const formatted = [
   newHours.toString().padStart(2, '0'),
   newMinutes.toString().padStart(2, '0'),
@@ -67,10 +67,10 @@ function timeSun({ sys: { sunrise }, sys: { sunset }, timezone }) {
   const hour = pad(Math.floor(((sunset + timezone) % (60 * 60 * 24)) / (60 * 60)));
   const min = pad(Math.floor(((sunset + timezone) % (60 * 60)) / (60)));
   renderSun(hours, mins, hour, min)
-  
+
 }
 
-function renderSun(sunrise,newSunrise,sunset,newSunset) { 
+function renderSun(sunrise,newSunrise,sunset,newSunset) {
   refs.listTime.insertAdjacentHTML('beforeend', dataTemplates({ sunrise,newSunrise, sunset,newSunset }))
 }
 

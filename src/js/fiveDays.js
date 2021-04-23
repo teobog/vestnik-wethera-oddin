@@ -9,7 +9,7 @@ const ref = {
   fiveDaysTitle2: document.querySelector('#h2_container'),
 
   fiveDaysTitleTablet: document.querySelector('.five_days_tablet'),
-  
+
   moreInfoBtn: document.querySelector('.more_info_button'),
   };
 // console.log(btn1);
@@ -17,7 +17,7 @@ const ref = {
 
 function fetchfiveDays(serchQuery) {
 
-  return fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${serchQuery}&appid=33417cdb9f22734d9f99a1eef2dd1402&units=metric`)
+  return fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${serchQuery}&appid=33417cdb9f22734d9f99a1eef2dd1402&units=metric`)
     .then(res => res.json()).then(checkQuery).catch();
 }
 
@@ -29,11 +29,11 @@ function checkQuery(data) {
   // }
   let name = data.city.name;
   let country = data.city.country;
-  ref.fiveDaysTitle2.innerHTML = `<h2 class="five_days_city_title">${name}, <span class="five_days_country_title">${country}</span></h2>`  
+  ref.fiveDaysTitle2.innerHTML = `<h2 class="five_days_city_title">${name}, <span class="five_days_country_title">${country}</span></h2>`
   ref.fiveDaysTitle.innerHTML = `<h2 class="five_days_city_title">${name}, <span class="five_days_country_title">${country}</span></h2>`
   ref.fiveDaysTitleTablet.innerHTML = `<h2 class="five_days_tablet">${name}, <span class="five_days_country_title">${country}</span></h2>`
 
-      
+
   let date1 = 0;
   let arr = [];
   let dateNow = new Date;
@@ -54,9 +54,9 @@ function checkQuery(data) {
 }
 let wearherIcon = '';
   function checkIcon(data,i) {
-         
+
     let weatherDescription = (data.list[i].weather[0].description);
-    
+
     if (weatherDescription === 'clear sky') {
         wearherIcon = './images/symbol-defs.svg#icon-clear_sky'
     } else if(weatherDescription === 'scattered clouds') {
@@ -86,7 +86,7 @@ let daysArr = [];
 function dataProcessing(first, data) {
   daysArr = [];
   // console.log(data);
-  
+
   let number = 0;
   let firstDayArr = [];
 
@@ -99,7 +99,7 @@ function dataProcessing(first, data) {
   number +=1
   checkIcon(data, 0);
   getDates(0, minFirstDay, maxFirstDay, number, wearherIcon)
-  
+
 
   let second = first + 8;
   let secondtDayArr = [];
@@ -113,7 +113,7 @@ function dataProcessing(first, data) {
   checkIcon(data, second-4)
   getDates(first, minSecondtDay, maxSecondtDay,number,wearherIcon)
   first = second + 8;
-  
+
   let thirdDayArr = [];
   for (let i = second; i < first; i += 1) {
     thirdDayArr.push(data.list[i].main.temp_min)
@@ -125,7 +125,7 @@ function dataProcessing(first, data) {
   checkIcon(data, first-4)
   getDates(second, minThirdDay, maxThirdDay,number,wearherIcon)
   second = first + 8;
-  
+
   let fourthDayArr = [];
   for (let i = first; i < second; i += 1) {
     fourthDayArr.push(data.list[i].main.temp_min)
@@ -137,7 +137,7 @@ function dataProcessing(first, data) {
   checkIcon(data, second-4)
   getDates(first, minFourthDay, maxFourthDay,number,wearherIcon)
   first = second + 8;
-  
+
   ;
   let fifthDayArr = [];
   for (let i = second; i < first; i += 1) {
@@ -160,7 +160,7 @@ function dataProcessing(first, data) {
 
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const monthName = months[date.getMonth()];
-    
+
 
     createObjDay(dateName, dayName, monthName, minT, maxT,number,wearherIcon);
 
@@ -168,7 +168,7 @@ function dataProcessing(first, data) {
 
 
   function createObjDay(dateName, dayName, monthName, minT, maxT,number,wearherIcon) {
-    
+
 
     daysArr.push({
       date: dateName,
@@ -179,14 +179,14 @@ function dataProcessing(first, data) {
       link: dateName,
       number: `day${number}`,
       icon: wearherIcon,
-      
+
       });
-      
-    
+
+
   }
 renderWeather(daysArr);
-    
-  
+
+
 }
 
 function renderWeather(daysArr) {
